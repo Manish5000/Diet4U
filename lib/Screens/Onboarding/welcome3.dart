@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Accountsetup/age.dart';
 import 'package:diet4u/Screens/Onboarding/welcome2.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:flutter/material.dart';
@@ -25,8 +26,16 @@ class _Welcome3State extends State<Welcome3> {
           ),
           SizedBox(height: 20,),
           Text('GOOD \nNUTRITION\n = \n RESULTS',style: GoogleFonts.urbanist(fontSize: 26,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-          SizedBox(height: 55,),
-          Button1(name: 'Next', color1: Color(0xFF7552FF),)
+          SizedBox(height: 50,),
+          Button1(
+            name: 'Next', 
+            color1: Color(0xFF7552FF),
+            func: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (builder){
+                return AgeSelect();
+              }));
+            },
+   )
         ],
       ),
       

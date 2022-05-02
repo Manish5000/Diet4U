@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Accountsetup/gender.dart';
 import 'package:diet4u/Screens/Onboarding/splashscreen.dart';
 import 'package:diet4u/Screens/Onboarding/welcome1.dart';
 import 'package:diet4u/Screens/Onboarding/welcome2.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: Welcome2(),
+      home: Genderscreen(),
     );
   }
 }
