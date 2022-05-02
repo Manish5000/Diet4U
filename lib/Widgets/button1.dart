@@ -14,19 +14,19 @@ class _Button1State extends State<Button1> {
   
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: widget.func,
-      child: Container(
-        alignment: Alignment.center,
-        height: 50,
-        width: 300,
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: widget.color1!,
-          borderRadius: BorderRadius.circular(25),
-          ),
-        child: Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,))),
-    );
+    return Container(
+      alignment: Alignment.center,
+      height: 45,
+      width: 300,
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: widget.color1!,
+        borderRadius: BorderRadius.circular(22),
+        ),
+      child: InkWell(
+        child: Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,)),
+        onTap: widget.func ,
+        ));
     
   }
 }

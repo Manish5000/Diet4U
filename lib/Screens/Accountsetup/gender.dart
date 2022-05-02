@@ -8,16 +8,21 @@ class Genderscreen extends StatefulWidget {
   @override
   State<Genderscreen> createState() => _GenderscreenState();
 }
-
+enum Gender{
+  male,
+  female,
+}
 class _GenderscreenState extends State<Genderscreen> {
-  final greyColor = Color(0xFFC4C4C4);
-  final voiletcolor = Color(0xFF7552FF);
-  
-  bool isselected = false;
+  final inactivecolor = Color(0xFFC4C4C4);
+  final activecolor = Color(0xFF7552FF);
+   Gender? selectedgender;
   @override
+  
   Widget build(BuildContext context)
    {
+     
     return Scaffold(
+      
       body: Padding(
         
         padding: const EdgeInsets.fromLTRB(45, 75, 30, 50),
@@ -37,17 +42,17 @@ class _GenderscreenState extends State<Genderscreen> {
             GestureDetector(
               onTap: (() {
                setState(() {
-                 isselected = true;
+                 selectedgender = Gender.male;
                }); 
               }),
               child: CircleAvatar(
-                backgroundColor: isselected==true? voiletcolor:greyColor,
+                backgroundColor: selectedgender==Gender.male?activecolor :inactivecolor,
                 radius: 85,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.male,size: 60,color: Colors.white,),
-                    Text('Female',style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,fontWeight: FontWeight.bold),)
+                    Text('Male',style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,fontWeight: FontWeight.bold),)
                   ],
                 ),
               ),
@@ -55,22 +60,22 @@ class _GenderscreenState extends State<Genderscreen> {
             SizedBox(height: 20,),
             GestureDetector(
               onTap: () {
-                isselected = true;
+                selectedgender = Gender.female;
               },
               child: CircleAvatar(
-                backgroundColor: isselected==true?voiletcolor:greyColor,
+                backgroundColor: selectedgender==Gender.female?activecolor :inactivecolor,
                 radius: 85,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.female,size: 60,color: Colors.white,),
-                    Text('Male',style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,fontWeight: FontWeight.bold),),
+                    Text('Female',style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,fontWeight: FontWeight.bold),),
                     
                   ],
                 ),
               ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height*0.157,),
+            SizedBox(height: MediaQuery.of(context).size.height*0.1,),
             Button1(name: 'Continue', color1: Color(0xFF7552FF), func: (){}),
           ],
         ),
