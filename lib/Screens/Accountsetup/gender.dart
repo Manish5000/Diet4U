@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Accountsetup/age.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,8 +14,8 @@ enum Gender{
   female,
 }
 class _GenderscreenState extends State<Genderscreen> {
-  final inactivecolor = Color(0xFFC4C4C4);
-  final activecolor = Color(0xFF7552FF);
+  Color inactivecolor = Color(0xFFC4C4C4);
+  Color activecolor = Color(0xFF7552FF);
    Gender? selectedgender;
   @override
   
@@ -38,7 +39,7 @@ class _GenderscreenState extends State<Genderscreen> {
                 Text('we need to know your gender.',style: GoogleFonts.urbanist(fontSize: 16,color: Colors.black,),),
               ],
             ),
-            SizedBox(height: MediaQuery.of(context).size.height*0.1),
+            SizedBox(height: MediaQuery.of(context).size.height*0.09),
             GestureDetector(
               onTap: (() {
                setState(() {
@@ -60,7 +61,9 @@ class _GenderscreenState extends State<Genderscreen> {
             SizedBox(height: 20,),
             GestureDetector(
               onTap: () {
-                selectedgender = Gender.female;
+                setState(() {
+                  selectedgender = Gender.female;
+                });
               },
               child: CircleAvatar(
                 backgroundColor: selectedgender==Gender.female?activecolor :inactivecolor,
@@ -75,8 +78,10 @@ class _GenderscreenState extends State<Genderscreen> {
                 ),
               ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height*0.1,),
-            Button1(name: 'Continue', color1: Color(0xFF7552FF), func: (){}),
+            SizedBox(height: MediaQuery.of(context).size.height*0.155,),
+            Button1(name: 'Continue', color1: Color(0xFF7552FF), func: (){
+              Navigator.push(context,MaterialPageRoute(builder: (context) => const AgeSelect()));
+            }),
           ],
         ),
       ),

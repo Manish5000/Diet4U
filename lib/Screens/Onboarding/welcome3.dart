@@ -1,4 +1,5 @@
 import 'package:diet4u/Screens/Accountsetup/age.dart';
+import 'package:diet4u/Screens/Accountsetup/gender.dart';
 import 'package:diet4u/Screens/Onboarding/welcome2.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class _Welcome3State extends State<Welcome3> {
             color1: Color(0xFF7552FF),
             func: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (builder){
-                return AgeSelect();
+                return Genderscreen();
               }));
             },
    )

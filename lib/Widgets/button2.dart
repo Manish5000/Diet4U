@@ -1,31 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-class Button1 extends StatefulWidget {
+class Button2 extends StatefulWidget {
 final String? name;
-final Color? color1;
+final Color? c1;
+final Color? c2;
 final VoidCallback? func;
 
-Button1({@required this.name, @required this.color1, @required this.func});
+Button2({@required this.name, @required this.c1, @required this.func,required this.c2});
   @override
-  _Button1State createState() => _Button1State();
+  _Button2State createState() => _Button2State();
 }
 
-class _Button1State extends State<Button1> {
+class _Button2State extends State<Button2> {
   
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
         alignment: Alignment.center,
-        height: 50,
-        width: 300,
+        height: 45,
+        width: 150,
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: widget.color1!,
+          color: widget.c1!,
           borderRadius: BorderRadius.circular(22),
           ),
         child: InkWell(
-          child: Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,)),
+          child: Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 14,color: widget.c2,fontWeight: FontWeight.bold)),
           onTap: widget.func ,
           )),
     );
