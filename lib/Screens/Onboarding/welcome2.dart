@@ -25,7 +25,7 @@ class _Welcome2State extends State<Welcome2> {
           ),
           SizedBox(height: 20,),
           Text('Find the right\n workout for what\n you need',style: GoogleFonts.urbanist(fontSize: 28,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-          SizedBox(height: 75,),
+          SizedBox(height: 25,),
           Button1(name: 'Next', color1: Color(0xFF7552FF),
           func: (){Navigator.push(context,MaterialPageRoute(builder: (context) => const Welcome3()),
   );},)

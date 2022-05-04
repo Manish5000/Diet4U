@@ -26,7 +26,7 @@ class _GenderscreenState extends State<Genderscreen> {
       
       body: Padding(
         
-        padding: const EdgeInsets.fromLTRB(45, 75, 30, 50),
+        padding: const EdgeInsets.fromLTRB(45, 75, 30, 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -78,7 +78,7 @@ class _GenderscreenState extends State<Genderscreen> {
                 ),
               ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height*0.155,),
+            SizedBox(height: MediaQuery.of(context).size.height*0.120,),
             Button1(name: 'Continue', color1: Color(0xFF7552FF), func: (){
               Navigator.push(context,MaterialPageRoute(builder: (context) => const AgeSelect()));
             }),

@@ -27,7 +27,7 @@ class _Welcome3State extends State<Welcome3> {
           ),
           SizedBox(height: 20,),
           Text('GOOD \nNUTRITION\n = \n RESULTS',style: GoogleFonts.urbanist(fontSize: 26,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-          SizedBox(height: 50,),
+          SizedBox(height: 25,),
           Button1(
             name: 'Next', 
             color1: Color(0xFF7552FF),

@@ -15,6 +15,7 @@ class _Button1State extends State<Button1> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: widget.func,
       child: Container(
         alignment: Alignment.center,
         height: 50,
@@ -26,7 +27,7 @@ class _Button1State extends State<Button1> {
           ),
         child: InkWell(
           child: Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,)),
-          onTap: widget.func ,
+          
           )),
     );
     
