@@ -1,4 +1,6 @@
 import 'package:diet4u/Widgets/button2.dart';
+import 'package:diet4u/Widgets/constant.dart';
+import 'package:diet4u/Widgets/header1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,8 +10,16 @@ class Activitylevel extends StatefulWidget {
   @override
   State<Activitylevel> createState() => _ActivitylevelState();
 }
-
+enum Activity{
+  Beginner,
+  Intermediate,
+  Advanced,
+}
 class _ActivitylevelState extends State<Activitylevel> {
+  Color inactivecolor = Colors.white;
+  Color activecolor = Color(0xFF7552FF);
+   Activity? SelectActivity;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,58 +29,72 @@ class _ActivitylevelState extends State<Activitylevel> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Physical Activity Level?',style: GoogleFonts.urbanist(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.black),),
-            SizedBox(height: 20,),
-            Text('Choose your regular activity level. This will',style: GoogleFonts.urbanist(fontSize: 16,color: Colors.black,),),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('help us to personalize plans for you.',style: GoogleFonts.urbanist(fontSize: 16,color: Colors.black,),),
-              ],
-            ),
+            Heading1(
+              mainheading: "Physical Activity Level?", 
+              subheading1: 'Choose your regular activity level. This will', 
+              subheading2: 'help us to personalize plans for you.'),
+            
 SizedBox(height: MediaQuery.of(context).size.height*0.2,),
-           Container(
-             height: 60,
-             width: 1200,
-             decoration: BoxDecoration( 
-               color: Colors.white,
-               borderRadius: BorderRadius.circular(15),
+           GestureDetector(
+             onTap: (){setState(() {
+               SelectActivity = Activity.Beginner;
+             });},
+             child: Container(
+               height: 60,
+               width: 1200,
+               decoration: BoxDecoration( 
+                 
+                 color: SelectActivity == Activity.Beginner? activecolor : inactivecolor,
+                 borderRadius: BorderRadius.circular(15),
+                 ),
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   Text("Beginner",style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold))
+                 ],
                ),
-             child: Column(
-               mainAxisAlignment: MainAxisAlignment.center,
-               children: [
-                 Text("Beginner",style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold))
-               ],
              ),
            ),
             SizedBox(height: 15,),
-           Container(
-             height: 60,
-             width: 1200,
-             decoration: BoxDecoration( 
-               color: Colors.white,
-               borderRadius: BorderRadius.circular(15),
+           GestureDetector(
+             onTap: (){setState(() {
+               SelectActivity = Activity.Intermediate;
+             });},
+             child: Container(
+               height: 60,
+               width: 1200,
+               decoration: BoxDecoration( 
+                 color: SelectActivity == Activity.Intermediate? activecolor : inactivecolor,
+                 borderRadius: BorderRadius.circular(15),
+                 ),
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   Text("Intermediate",style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold))
+                 ],
                ),
-             child: Column(
-               mainAxisAlignment: MainAxisAlignment.center,
-               children: [
-                 Text("Intermediate",style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold))
-               ],
              ),
            ),
            SizedBox(height: 15,),
-           Container(
-             height: 60,
-             width: 1200,
-             decoration: BoxDecoration( 
-               color: Colors.white,
-               borderRadius: BorderRadius.circular(15),
+           GestureDetector(
+             onTap: (){setState(() {
+               SelectActivity = Activity.Advanced;
+             });},
+             child: Container(
+               
+               height: 60,
+               width: 1200,
+               decoration: BoxDecoration( 
+                 
+                 color: SelectActivity == Activity.Advanced? activecolor : inactivecolor,
+                 borderRadius: BorderRadius.circular(15),
+                 ),
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   Text("Advanced",style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold))
+                 ],
                ),
-             child: Column(
-               mainAxisAlignment: MainAxisAlignment.center,
-               children: [
-                 Text("Advanced",style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold))
-               ],
              ),
            ),
            SizedBox(height: MediaQuery.of(context).size.height*0.200,),
@@ -78,9 +102,9 @@ SizedBox(height: MediaQuery.of(context).size.height*0.2,),
             
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Button2(name: 'Back', c1: Color(0xFFC4C4C4), func: (){Navigator.pop(context);}, c2: Color(0xFF7552FF)),
+              Button2(name: 'Back', c1: leftButton, func: (){Navigator.pop(context);}, c2: Color(0xFF7552FF)),
               SizedBox(width: 17,),
-               Button2(name: 'Continue', c1: Color(0xFF7552FF), func: (){}, c2: Colors.white,)
+               Button2(name: 'Continue', c1: rightbutton, func: (){}, c2: Colors.white,)
             ],
           )
            

@@ -2,6 +2,7 @@ import 'package:diet4u/Screens/Accountsetup/age.dart';
 import 'package:diet4u/Screens/Accountsetup/gender.dart';
 import 'package:diet4u/Screens/Onboarding/welcome2.dart';
 import 'package:diet4u/Widgets/button1.dart';
+import 'package:diet4u/Widgets/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -30,7 +31,7 @@ class _Welcome3State extends State<Welcome3> {
           SizedBox(height: 25,),
           Button1(
             name: 'Next', 
-            color1: Color(0xFF7552FF),
+            color1: rightbutton,
             func: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (builder){
                 return Genderscreen();

@@ -1,7 +1,10 @@
 import 'package:diet4u/Screens/Accountsetup/age.dart';
 import 'package:diet4u/Widgets/button1.dart';
+import 'package:diet4u/Widgets/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../Widgets/header1.dart';
 
 class Genderscreen extends StatefulWidget {
   const Genderscreen({ Key? key }) : super(key: key);
@@ -29,16 +32,11 @@ class _GenderscreenState extends State<Genderscreen> {
         padding: const EdgeInsets.fromLTRB(45, 75, 30, 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text('Tell Us About Yourself',style: GoogleFonts.urbanist(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.black),),
-            SizedBox(height: 20,),
-            Text('To give you a better experince and results',style: GoogleFonts.urbanist(fontSize: 16,color: Colors.black,),),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('we need to know your gender.',style: GoogleFonts.urbanist(fontSize: 16,color: Colors.black,),),
-              ],
-            ),
+          children: [Heading1(
+              mainheading: "Tell Us About Yourself", 
+              subheading1: 'To give you a better experince and results', 
+              subheading2: 'we need to know your gender'),
+            
             SizedBox(height: MediaQuery.of(context).size.height*0.09),
             GestureDetector(
               onTap: (() {
@@ -79,7 +77,7 @@ class _GenderscreenState extends State<Genderscreen> {
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.120,),
-            Button1(name: 'Continue', color1: Color(0xFF7552FF), func: (){
+            Button1(name: 'Continue', color1: rightbutton, func: (){
               Navigator.push(context,MaterialPageRoute(builder: (context) => const AgeSelect()));
             }),
           ],
