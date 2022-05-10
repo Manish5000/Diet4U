@@ -7,6 +7,7 @@ import 'package:diet4u/Screens/Onboarding/splashscreen.dart';
 import 'package:diet4u/Screens/Onboarding/welcome1.dart';
 import 'package:diet4u/Screens/Onboarding/welcome2.dart';
 import 'package:diet4u/Screens/Onboarding/welcome3.dart';
+import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: splashscreen(),
+      home: ChooseAccount(),
     );
   }
 }

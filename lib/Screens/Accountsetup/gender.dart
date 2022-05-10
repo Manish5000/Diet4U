@@ -32,7 +32,8 @@ class _GenderscreenState extends State<Genderscreen> {
         padding: const EdgeInsets.fromLTRB(45, 75, 30, 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Heading1(
+          children: [
+            Heading1(
               mainheading: "Tell Us About Yourself", 
               subheading1: 'To give you a better experince and results', 
               subheading2: 'we need to know your gender'),
