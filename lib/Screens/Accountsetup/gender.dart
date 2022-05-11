@@ -79,7 +79,7 @@ class _GenderscreenState extends State<Genderscreen> {
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.120,),
             Button1(name: 'Continue', color1: rightbutton, func: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context) => const AgeSelect()));
+              Navigator.push(context,MaterialPageRoute(builder: (context) =>  AgeSelect()));
             }),
           ],
         ),

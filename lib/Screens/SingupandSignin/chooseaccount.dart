@@ -1,5 +1,8 @@
 import 'dart:ffi';
 
+import 'package:diet4u/Screens/SingupandSignin/signup.dart';
+import 'package:diet4u/Widgets/button1.dart';
+import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -51,7 +54,11 @@ class _ChooseAccountState extends State<ChooseAccount> {
                   child: Container(height: 1,
                   decoration: BoxDecoration(color: Colors.black),),
                 ),
-            ],)
+            ],),
+            SizedBox(height: MediaQuery.of(context).size.height*0.150,),
+            Button1(name: 'Signup', color1: rightbutton, func: (){
+              Navigator.push(context, MaterialPageRoute(builder: ((context) => Signupwithmail()))); 
+            })
 
             
           ],

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "172071594310",
+    "project_id": "diet4u-4c0f7",
+    "storage_bucket": "diet4u-4c0f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172071594310:android:b4da45c5aad6e7f0e85d47",
+        "android_client_info": {
+          "package_name": "com.example.diet4u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172071594310-0qil9basp8b8bbgg6l4aokg0618ogaub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.diet4u",
+            "certificate_hash": "92ee05e98bb95512c586d495550477a79e4ab295"
+          }
+        },
+        {
+          "client_id": "172071594310-le05ajs9vqjdebaur3d3aesv3ohi58th.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYGf9Rue52t6sYkKcZSoebIqXyUbOVdzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172071594310-le05ajs9vqjdebaur3d3aesv3ohi58th.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
