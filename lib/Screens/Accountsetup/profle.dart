@@ -26,7 +26,7 @@ class _FillProfileState extends State<FillProfile> {
             Heading1(
               mainheading: "Physical Activity level?", 
               subheading1: 'Choose your regular activity level. This will', 
-              subheading2: 'help us to personalize plans for you'),
+              subheading2: 'help us to personalize plans for you.'),
             SizedBox(height: MediaQuery.of(context).size.height*0.100),
             CircleAvatar(
               foregroundColor: Colors.grey,
@@ -48,6 +48,7 @@ class _FillProfileState extends State<FillProfile> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Button2(name: 'Skip', c1: leftButton, func: (){}, c2: leftButtontext),
+                SizedBox(width: 10,),
                 Button2(name: 'Start', c1: rightbutton, func: (){}, c2: rightbuttontext),
               ],
             ),

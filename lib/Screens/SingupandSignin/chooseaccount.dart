@@ -30,11 +30,11 @@ class _ChooseAccountState extends State<ChooseAccount> {
               padding: const EdgeInsets.only(left:20,top: 40) ,
               child: Heading2(text: "Let's you in"),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height*0.130,),
-            Buttonarea(icon: Icons.mail,c: Colors.black,text: 'Continue with E-mail',),
+            SizedBox(height: MediaQuery.of(context).size.height*0.150,),
+            Buttonarea(text: 'Continue with E-mail',icon: Icons.mail,c: Colors.black,),
             SizedBox(height: 10,),
             Buttonarea(text: 'Conitnue with google', icon: FontAwesomeIcons.google,c: Colors.black,iconsize: 20,),
-            SizedBox(height: MediaQuery.of(context).size.height*0.110,),
+            SizedBox(height: MediaQuery.of(context).size.height*0.140,),
             Row(mainAxisAlignment: MainAxisAlignment.center,
             
               children: [
