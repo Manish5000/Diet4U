@@ -34,7 +34,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
           SizedBox(height: MediaQuery.of(context).size.height*0.07,),
           Textfield(text: 'Email',prefixicon: Icons.mail,isPassword: false),
           SizedBox(height: 15),
-          Textfield(text: 'Password',prefixicon: Icons.key,suffixicon: Icon(Icons.remove_red_eye),Obscuretext: true,isPassword: true),
+          Textfield(text: 'Password',prefixicon: Icons.lock,suffixicon: Icon(Icons.remove_red_eye),Obscuretext: true,isPassword: true),
           SizedBox(height: MediaQuery.of(context).size.height*0.035,),
           Button1(name: 'Sign In', color1: rightbutton, func: (){}),
           SizedBox(height: MediaQuery.of(context).size.height*0.025,),

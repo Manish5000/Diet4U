@@ -24,12 +24,15 @@ class _Welcome2State extends State<Welcome2> {
             width: 500,
             child: Image(image: AssetImage('assets/welcome2.jpg'),fit: BoxFit.fitWidth),
           ),
-          SizedBox(height: 20,),
+          SizedBox(height: MediaQuery.of(context).size.height*0.050,),
           Text('Find the right\n workout for what\n you need',style: GoogleFonts.urbanist(fontSize: 28,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-          SizedBox(height: 25,),
-          Button1(name: 'Next', color1: rightbutton,
-          func: (){Navigator.push(context,MaterialPageRoute(builder: (context) => const Welcome3()),
-  );},)
+          Spacer(),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Button1(name: 'Next', color1: rightbutton,
+            func: (){Navigator.push(context,MaterialPageRoute(builder: (context) => const Welcome3()),
+  );},),
+          )
         ],
       ),
       

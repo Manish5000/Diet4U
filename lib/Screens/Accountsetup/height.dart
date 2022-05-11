@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Accountsetup/goal.dart';
 import 'package:diet4u/Screens/Accountsetup/weight.dart';
 import 'package:diet4u/Widgets/button2.dart';
 import 'package:diet4u/Widgets/constant.dart';
@@ -7,14 +8,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
-class AgeSelect extends StatefulWidget {
-  const AgeSelect({ Key? key }) : super(key: key);
+class HeightSelect extends StatefulWidget {
+  const HeightSelect({ Key? key }) : super(key: key);
 
   @override
-  State<AgeSelect> createState() => _AgeSelectState();
+  State<HeightSelect> createState() => _HeightSelectState();
 }
 
-class _AgeSelectState extends State<AgeSelect> {
+class _HeightSelectState extends State<HeightSelect> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
@@ -29,9 +30,9 @@ class _AgeSelectState extends State<AgeSelect> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Heading1(
-                mainheading: "How Old Are You?", 
-                subheading1: 'Age in years. This will help us to personalize', 
-                subheading2: 'an exercise program plan that suits you.'),
+                mainheading: "What is Your Height?", 
+                subheading1: "Height in cm. Don't worry, you can always", 
+                subheading2: 'change it later.'),
             
               SizedBox(height: MediaQuery.of(context).size.height*0.250),
             CupertinoPicker(itemExtent: 30,
@@ -60,13 +61,12 @@ offAxisFraction: 0,
             ]),
             Spacer(),
             Row(
-              
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Button2(name: 'Back', buttoncolor: leftButton, func: (){Navigator.pop(context);}, textcolor: Color(0xFF7552FF)),
                 SizedBox(width: 20,),
                  Button2(name: 'Continue', buttoncolor: rightbutton, func: (){
-                   Navigator.push(context,MaterialPageRoute(builder: (context) =>  Weightselect()));
+                   Navigator.push(context,MaterialPageRoute(builder: (context) =>  Selectgoal()));
                  }, textcolor: Colors.white,)
               ],
             )

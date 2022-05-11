@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:diet4u/Screens/SingupandSignin/login.dart';
 import 'package:diet4u/Screens/SingupandSignin/signup.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
@@ -34,9 +35,11 @@ class _ChooseAccountState extends State<ChooseAccount> {
               child: Heading2(text: "Let's you in"),
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.150,),
-            Buttonarea(text: 'Continue with E-mail',icon: Icons.mail,c: Colors.black,),
+            Buttonarea(text: 'Continue with E-mail',icon: Icons.mail,c: Colors.black,func: (){
+              Navigator.push(context,MaterialPageRoute(builder: (context) =>  Loginwithmail()));
+            },),
             SizedBox(height: 10,),
-            Buttonarea(text: 'Conitnue with google', icon: FontAwesomeIcons.google,c: Colors.black,iconsize: 20,),
+            Buttonarea(text: 'Conitnue with google', icon: FontAwesomeIcons.google,c: Colors.black,iconsize: 20,func: (){},),
             SizedBox(height: MediaQuery.of(context).size.height*0.140,),
             Row(mainAxisAlignment: MainAxisAlignment.center,
             
@@ -76,9 +79,10 @@ class Buttonarea extends StatefulWidget {
   final IconData? icon;
   final Color? c;
   final double? iconsize;
+  final VoidCallback? func;
 
   
-  const Buttonarea({ @required this.text, @required this.icon, this.c,this.iconsize});
+  const Buttonarea({ @required this.text, @required this.icon,this.func, this.c,this.iconsize});
 
   @override
   State<Buttonarea> createState() => _ButtonareaState();
@@ -95,7 +99,7 @@ class _ButtonareaState extends State<Buttonarea> {
         elevation: 5,
         primary: Colors.white
       ),
-      onPressed: (){},
+      onPressed: widget.func,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

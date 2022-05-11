@@ -102,9 +102,9 @@ SizedBox(height: MediaQuery.of(context).size.height*0.2,),
             
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Button2(name: 'Back', c1: leftButton, func: (){Navigator.pop(context);}, c2: Color(0xFF7552FF)),
+              Button2(name: 'Back', buttoncolor: leftButton, func: (){Navigator.pop(context);}, textcolor: Color(0xFF7552FF)),
               SizedBox(width: 17,),
-               Button2(name: 'Continue', c1: rightbutton, func: (){}, c2: Colors.white,)
+               Button2(name: 'Continue', buttoncolor: rightbutton, func: (){}, textcolor: Colors.white,)
             ],
           )
            

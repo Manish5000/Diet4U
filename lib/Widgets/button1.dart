@@ -15,18 +15,22 @@ class _Button1State extends State<Button1> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: widget.func,
-      child: Container(
-        alignment: Alignment.center,
-        height: 50,
-        width: 300,
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: widget.color1!,
-          borderRadius: BorderRadius.circular(22),
-          ),
+      
+      child: ElevatedButton(
+        onPressed: widget.func,
+        style: ElevatedButton.styleFrom(
+          alignment: Alignment.center,
+          padding: EdgeInsets.all(10),
+          elevation: 5,
+          primary: widget.color1!,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          fixedSize: Size(200, 45,),
+
+        ),
+        
+        
         child: InkWell(
-          child: Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,)),
+          child: Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w600)),
           
           )),
     );
