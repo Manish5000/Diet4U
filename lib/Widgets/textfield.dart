@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class Textfield extends StatelessWidget {
   final String? text;
-  
-  const Textfield({ @required this.text,  }) ;
+  final IconData? prefixicon;
+  final IconData? suffixicon;
+  const Textfield({ @required this.text,this.prefixicon,this.suffixicon  }) ;
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +12,8 @@ class Textfield extends StatelessWidget {
           TextFormField(
              
               decoration: InputDecoration(
+                prefixIcon: Icon(prefixicon),
+                suffixIcon: Icon(suffixicon),
                 isDense: true,
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -24,7 +27,8 @@ class Textfield extends StatelessWidget {
                 filled: true,
                 // border: OutlineInputBorder(borderRadius: BorderRadius.circular(30),),
                 hintText: 'Enter your name',
-                labelText: text,labelStyle: TextStyle(color: Colors.grey, fontSize: 14 )
+                labelText: text,labelStyle: TextStyle(color: Colors.grey, fontSize: 14 ),
+                
               ),
             );
         
