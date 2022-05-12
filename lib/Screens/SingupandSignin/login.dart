@@ -44,6 +44,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.07,),
             Textfield(
+              
               text: 'Email',
             prefixicon: Icons.mail,
             keyboardtype: TextInputType.emailAddress,
@@ -55,13 +56,13 @@ class _LoginwithmailState extends State<Loginwithmail> {
                 },
                 validatorr: (value){
                   if (value!.isEmpty) {
-                    return("Please Enter Your Email");
-                  } 
+                    return('Email is required for login');
+                  }
                   if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
                     return("Please Enter a valid email ");
                   }
                   // ignore: null_check_always_fails
-                  return null!;
+                  return ('');
                 },),
             SizedBox(height: 15),
             Textfield(
@@ -84,7 +85,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
                     return("Password enter valid Password(Min. 6 Character");
                   }
                   // ignore: null_check_always_fails
-                  return null!;
+                  return ('');
                 },),
             SizedBox(height: MediaQuery.of(context).size.height*0.035,),
             Button1(name: 'Sign In', 

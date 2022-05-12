@@ -56,6 +56,11 @@ class _TextfieldState extends State<Textfield> {
                 
               ),
             ) : TextFormField(
+               textInputAction:widget.textinputaction ,
+            keyboardType: widget.keyboardtype,
+            controller: widget.controllerr,
+            onSaved:widget.onsaved ,
+            validator: widget.validatorr,
               decoration: InputDecoration(
                 prefixIcon: Icon(widget.prefixicon),
                 isDense: true,
