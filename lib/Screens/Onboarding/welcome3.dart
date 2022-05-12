@@ -17,35 +17,33 @@ class Welcome3 extends StatefulWidget {
 class _Welcome3State extends State<Welcome3> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            Container(
-              
-              height: 550,
-              width: 500,
-              child: Image(image: AssetImage('assets/welcome3.jpg'),fit: BoxFit.fitWidth),
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height*0.030,),
-            Text('GOOD \nNUTRITION\n = \n RESULTS',style: GoogleFonts.urbanist(fontSize: 26,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-            SizedBox(height: MediaQuery.of(context).size.height*0.020,),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Button1(
-                name: 'Next', 
-                color1: rightbutton,
-                func: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (builder){
-                    return Genderscreen();
-                  }));
-                },
-       ),
-            )
-          ],
-        ),
-        
+    return Scaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(
+            
+            
+            child: Image(image: AssetImage('assets/welcome3.jpg'),fit: BoxFit.fitWidth),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height*0.030,),
+          Text('GOOD \nNUTRITION\n = \n RESULTS',style: GoogleFonts.urbanist(fontSize: 26,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+          SizedBox(height: MediaQuery.of(context).size.height*0.020,),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Button1(
+              name: 'Next', 
+              color1: rightbutton,
+              func: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (builder){
+                  return Genderscreen();
+                }));
+              },
+     ),
+          )
+        ],
       ),
+      
     );
   }
 }

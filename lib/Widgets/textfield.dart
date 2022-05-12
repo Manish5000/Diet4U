@@ -5,11 +5,13 @@ class Textfield extends StatefulWidget {
   final IconData? prefixicon;
   final Widget? suffixicon;
   bool? Obscuretext;
+  final TextInputAction? textinputaction;
   final bool? isPassword;
   final TextEditingController? controllerr;
   final Function(String?)? onsaved;
   String Function(String?)? validatorr;
-  Textfield({ @required this.text,this.prefixicon,this.suffixicon,this.Obscuretext,required this.isPassword,this.controllerr,this.onsaved,this.validatorr}) ;
+  final TextInputType? keyboardtype;
+  Textfield({ @required this.text,this.textinputaction,this.keyboardtype,this.prefixicon,this.suffixicon,this.Obscuretext,required this.isPassword,this.controllerr,this.onsaved,this.validatorr}) ;
 
   @override
   State<Textfield> createState() => _TextfieldState();
@@ -20,6 +22,8 @@ class _TextfieldState extends State<Textfield> {
   Widget build(BuildContext context) {
     return widget.isPassword == true? 
           TextFormField(
+            textInputAction:widget.textinputaction ,
+            keyboardType: widget.keyboardtype,
             controller: widget.controllerr,
             onSaved:widget.onsaved ,
             validator: widget.validatorr,

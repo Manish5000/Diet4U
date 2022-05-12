@@ -131,10 +131,5 @@ class _SignupwithmailState extends State<Signupwithmail> {
 
 
 
-void signIn(String email, String password) async{
-  if(_formKey.currentState!.validate())
-  {
 
-  }
-}
 }
