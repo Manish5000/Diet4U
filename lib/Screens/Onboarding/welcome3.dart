@@ -27,7 +27,7 @@ class _Welcome3State extends State<Welcome3> {
             child: Image(image: AssetImage('assets/welcome3.jpg'),fit: BoxFit.fitWidth),
           ),
           SizedBox(height: MediaQuery.of(context).size.height*0.030,),
-          Text('GOOD \nNUTRITION\n = \n RESULTS',style: GoogleFonts.urbanist(fontSize: 26,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+          Text('GOOd \nNUTRITION\n = \n RESULTS',style: GoogleFonts.urbanist(fontSize: 26,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
           SizedBox(height: MediaQuery.of(context).size.height*0.020,),
           Padding(
             padding: const EdgeInsets.all(20),
