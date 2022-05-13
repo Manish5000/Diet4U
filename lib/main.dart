@@ -9,6 +9,7 @@ import 'package:diet4u/Screens/Onboarding/welcome2.dart';
 import 'package:diet4u/Screens/Onboarding/welcome3.dart';
 import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
 import 'package:diet4u/Screens/SingupandSignin/login.dart';
+import 'package:diet4u/homescreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: splashscreen(),
+      home: Homescreen(),
     );
   }
 }

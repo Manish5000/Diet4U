@@ -62,7 +62,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
                     return("Please Enter a valid email ");
                   }
                   // ignore: null_check_always_fails
-                  return ('');
+                  return null!;
                 },),
             SizedBox(height: 15),
             Textfield(
@@ -137,7 +137,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
       Fluttertoast.showToast(msg: "Login successful"),
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>FillProfile())),
     }).catchError((e){
-      Fluttertoast.showToast(msg:e!.message);
+      Fluttertoast.showToast(msg:e!.message); 
     });
   }
 }
