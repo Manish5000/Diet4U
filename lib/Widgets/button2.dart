@@ -24,8 +24,8 @@ class _Button2State extends State<Button2> {
           padding: EdgeInsets.all(10),
           elevation: 5,
           primary: widget.buttoncolor!,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          fixedSize: Size(150, 45,),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+          fixedSize: Size(175, 47,),
         ),
         child: InkWell(
           child: Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 14,color: widget.textcolor,fontWeight: FontWeight.w600)),

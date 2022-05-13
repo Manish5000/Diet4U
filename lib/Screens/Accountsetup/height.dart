@@ -18,7 +18,7 @@ class HeightSelect extends StatefulWidget {
 class _HeightSelectState extends State<HeightSelect> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
@@ -75,6 +75,6 @@ offAxisFraction: 0,
         ),
       ),
       
-    ));
+    );
   }
 }

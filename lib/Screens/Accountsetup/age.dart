@@ -17,7 +17,7 @@ class AgeSelect extends StatefulWidget {
 class _AgeSelectState extends State<AgeSelect> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
@@ -75,6 +75,6 @@ offAxisFraction: 0,
         ),
       ),
       
-    ));
+    );
   }
 }

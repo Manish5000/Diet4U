@@ -28,7 +28,7 @@ class _Welcome2State extends State<Welcome2> {
           Text('Find the right\n workout for what\n you need',style: GoogleFonts.urbanist(fontSize: 28,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
           Spacer(),
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.only(bottom: 20,left: 20,right: 20),
             child: Button1(name: 'Next', color1: rightbutton,
             func: (){Navigator.push(context,MaterialPageRoute(builder: (context) => const Welcome3()),
   );},),

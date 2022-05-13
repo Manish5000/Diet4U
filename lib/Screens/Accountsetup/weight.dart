@@ -15,7 +15,7 @@ class Weightselect extends StatefulWidget {
 class _WeightselectState extends State<Weightselect> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -74,6 +74,6 @@ offAxisFraction: 0,
         ),
       ),
       
-    ));
+    );
   }
 }

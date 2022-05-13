@@ -23,8 +23,8 @@ class _Button1State extends State<Button1> {
           padding: EdgeInsets.all(10),
           elevation: 5,
           primary: widget.color1!,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          fixedSize: Size(200, 45,),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+          fixedSize: Size(MediaQuery.of(context).size.width, 47,),
 
         ),
         

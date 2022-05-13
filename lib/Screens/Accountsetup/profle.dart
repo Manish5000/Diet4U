@@ -55,7 +55,7 @@ class _FillProfileState extends State<FillProfile> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Button2(name: 'Skip', buttoncolor: leftButton, func: (){}, textcolor: leftButtontext),
-                SizedBox(width: 10,),
+                SizedBox(width: 20,),
                 Button2(name: 'Start', buttoncolor: rightbutton, func: (){
                   Navigator.push(context,MaterialPageRoute(builder: (context) =>  ChooseAccount()));
                 }, textcolor: rightbuttontext),

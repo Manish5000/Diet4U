@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:diet4u/Screens/Accountsetup/profle.dart';
+import 'package:diet4u/Screens/ForgotAndResetPass/smsorEmail.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
@@ -85,7 +86,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
                     return("Password enter valid Password(Min. 6 Character");
                   }
                   // ignore: null_check_always_fails
-                  return ('');
+                  return null!;
                 },),
             SizedBox(height: MediaQuery.of(context).size.height*0.035,),
             Button1(name: 'Sign In', 
@@ -94,7 +95,9 @@ class _LoginwithmailState extends State<Loginwithmail> {
               signIn(emailcontroller.text, passwordcontroller.text);
             }),
             SizedBox(height: MediaQuery.of(context).size.height*0.025,),
-            GestureDetector(onTap: (){},
+            GestureDetector(onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: ((context) => SMSorEmail())));
+            },
             child: Text('Forgot Password ?',
             style: GoogleFonts.urbanist(fontSize: 14),)),
             SizedBox(height: MediaQuery.of(context).size.height*0.08,),
