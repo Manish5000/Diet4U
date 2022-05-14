@@ -3,6 +3,7 @@ import 'dart:collection';
 import 'package:diet4u/Screens/Accountsetup/activitylevel.dart';
 import 'package:diet4u/Screens/Accountsetup/gender.dart';
 import 'package:diet4u/Screens/Accountsetup/profle.dart';
+import 'package:diet4u/Screens/ForgotAndResetPass/createpass.dart';
 import 'package:diet4u/Screens/ForgotAndResetPass/smsorEmail.dart';
 import 'package:diet4u/Screens/Homescreen/homepage.dart';
 import 'package:diet4u/Screens/Onboarding/splashscreen.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: Homescreen(),
+      home: splashscreen(),
     );
   }
 }
