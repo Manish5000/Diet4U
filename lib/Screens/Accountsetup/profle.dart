@@ -31,9 +31,9 @@ class _FillProfileState extends State<FillProfile> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Heading1(
-              mainheading: "Physical Activity level?", 
-              subheading1: 'Choose your regular activity level. This will', 
-              subheading2: 'help us to personalize plans for you.'),
+              mainheading: "Fill Your Profile", 
+              subheading1: "Don't worry, you can always change it later, or", 
+              subheading2: 'you can skip it for now.'),
             SizedBox(height: MediaQuery.of(context).size.height*0.070),
             CircleAvatar(
               foregroundColor: Colors.grey,

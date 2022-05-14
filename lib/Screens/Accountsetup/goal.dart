@@ -1,16 +1,26 @@
+import 'package:diet4u/Screens/Accountsetup/activitylevel.dart';
 import 'package:diet4u/Screens/Accountsetup/profle.dart';
 import 'package:diet4u/Widgets/button2.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header1.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 class Selectgoal extends StatefulWidget {
   const Selectgoal({ Key? key }) : super(key: key);
 
   @override
   State<Selectgoal> createState() => _SelectgoalState();
 }
-
+enum Activity{
+  Beginner,
+  Intermediate,
+  Advanced,
+}
 class _SelectgoalState extends State<Selectgoal> {
+   Color inactivecolor = Colors.white;
+   Color activecolor = Color(0xFF7552FF);
+   Activity? SelectActivity;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,14 +38,77 @@ class _SelectgoalState extends State<Selectgoal> {
               subheading1: "You can choose more than one. Don't worry,", 
               subheading2: "you can always change it later."
               ),
-              Spacer(),
+              SizedBox(height: MediaQuery.of(context).size.height*0.2),
+              GestureDetector(
+             onTap: (){setState(() {
+               SelectActivity = Activity.Beginner;
+             });},
+             child: Container(
+               height: MediaQuery.of(context).size.height*0.070,
+              width: MediaQuery.of(context).size.width,
+               decoration: BoxDecoration( 
+                 
+                 color: SelectActivity == Activity.Beginner? activecolor : inactivecolor,
+                 borderRadius: BorderRadius.circular(15),
+                 ),
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   Text("Gain Weight",style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold))
+                 ],
+               ),
+             ),
+           ),
+            SizedBox(height: 15,),
+           GestureDetector(
+             onTap: (){setState(() {
+               SelectActivity = Activity.Intermediate;
+             });},
+             child: Container(
+               height: MediaQuery.of(context).size.height*0.070,
+               width: MediaQuery.of(context).size.width,
+               decoration: BoxDecoration( 
+                 color: SelectActivity == Activity.Intermediate? activecolor : inactivecolor,
+                 borderRadius: BorderRadius.circular(15),
+                 ),
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   Text("Lose Weight",style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold))
+                 ],
+               ),
+             ),
+           ),
+           SizedBox(height: 15,),
+           GestureDetector(
+             onTap: (){setState(() {
+               SelectActivity = Activity.Advanced;
+             });},
+             child: Container(
+               
+               height: MediaQuery.of(context).size.height*0.070,
+               width: MediaQuery.of(context).size.width,
+               decoration: BoxDecoration( 
+                 
+                 color: SelectActivity == Activity.Advanced? activecolor : inactivecolor,
+                 borderRadius: BorderRadius.circular(15),
+                 ),
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   Text("Buiuld Muscle",style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold))
+                 ],
+               ),
+             ),
+           ),
+           Spacer(),
               Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Button2(name: 'Back', buttoncolor: leftButton, func: (){Navigator.pop(context);}, textcolor: Color(0xFF7552FF)),
               SizedBox(width: 20,),
                Button2(name: 'Continue', buttoncolor: rightbutton, func: (){
-                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  FillProfile()));
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Activitylevel()));
                }, textcolor: Colors.white,)
             ],
           )

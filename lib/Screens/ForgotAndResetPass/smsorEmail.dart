@@ -29,11 +29,11 @@ class _SMSorEmailState extends State<SMSorEmail> {
         child: Column(
           children: [
             Lottie.asset('assets/forgotpassword.json',height: 250),
-            SizedBox(height: MediaQuery.of(context).size.height*0.030),
+            SizedBox(height: MediaQuery.of(context).size.height*0.050),
             Text('Select which contact datails should we use to reset \nyour paswword',
             style: GoogleFonts.urbanist(
               color: Colors.black),),
-              SizedBox(height: MediaQuery.of(context).size.height*0.010,),
+              SizedBox(height: MediaQuery.of(context).size.height*0.050,),
               Container(
                 height: MediaQuery.of(context).size.height*0.120,
                 margin: EdgeInsets.all(10),

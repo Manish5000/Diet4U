@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Accountsetup/profle.dart';
 import 'package:diet4u/Widgets/button2.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header1.dart';
@@ -23,9 +24,14 @@ class _ActivitylevelState extends State<Activitylevel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
       body: Padding(
         
-        padding: const EdgeInsets.fromLTRB(45, 75, 30, 50),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -40,8 +46,8 @@ SizedBox(height: MediaQuery.of(context).size.height*0.2,),
                SelectActivity = Activity.Beginner;
              });},
              child: Container(
-               height: 60,
-               width: 1200,
+               height: MediaQuery.of(context).size.height*0.070,
+              width: MediaQuery.of(context).size.width,
                decoration: BoxDecoration( 
                  
                  color: SelectActivity == Activity.Beginner? activecolor : inactivecolor,
@@ -61,8 +67,8 @@ SizedBox(height: MediaQuery.of(context).size.height*0.2,),
                SelectActivity = Activity.Intermediate;
              });},
              child: Container(
-               height: 60,
-               width: 1200,
+               height: MediaQuery.of(context).size.height*0.070,
+               width: MediaQuery.of(context).size.width,
                decoration: BoxDecoration( 
                  color: SelectActivity == Activity.Intermediate? activecolor : inactivecolor,
                  borderRadius: BorderRadius.circular(15),
@@ -82,8 +88,8 @@ SizedBox(height: MediaQuery.of(context).size.height*0.2,),
              });},
              child: Container(
                
-               height: 60,
-               width: 1200,
+               height: MediaQuery.of(context).size.height*0.070,
+               width: MediaQuery.of(context).size.width,
                decoration: BoxDecoration( 
                  
                  color: SelectActivity == Activity.Advanced? activecolor : inactivecolor,
@@ -97,14 +103,15 @@ SizedBox(height: MediaQuery.of(context).size.height*0.2,),
                ),
              ),
            ),
-           SizedBox(height: MediaQuery.of(context).size.height*0.200,),
+           Spacer(),
             Row(
-            
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Button2(name: 'Back', buttoncolor: leftButton, func: (){Navigator.pop(context);}, textcolor: Color(0xFF7552FF)),
-              SizedBox(width: 17,),
-               Button2(name: 'Continue', buttoncolor: rightbutton, func: (){}, textcolor: Colors.white,)
+              SizedBox(width: 20,),
+               Button2(name: 'Continue', buttoncolor: rightbutton, func: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  FillProfile()));
+               }, textcolor: Colors.white,)
             ],
           )
            

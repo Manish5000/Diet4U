@@ -3,7 +3,9 @@ import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:otp_text_field/otp_field.dart';
+import 'package:otp_text_field/otp_field_style.dart';
 import 'package:otp_text_field/style.dart';
 
 class OTPpage extends StatefulWidget {
@@ -17,6 +19,7 @@ class _OTPpageState extends State<OTPpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
        backgroundColor: Colors.white,
       appBar: AppBar(
         
@@ -28,8 +31,11 @@ class _OTPpageState extends State<OTPpage> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            Lottie.asset('assets/otp.json',height: 250),
+            SizedBox(height: MediaQuery.of(context).size.height*0.100,),
             Center(
               child:
               
@@ -39,10 +45,12 @@ class _OTPpageState extends State<OTPpage> {
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.070,),
             OTPTextField(
+              otpFieldStyle: OtpFieldStyle(enabledBorderColor: rightbutton),
               length: 4,
   width: MediaQuery.of(context).size.width,
   fieldWidth: 80,
   style: TextStyle(
+    
     color: Colors.black,
     fontWeight: FontWeight.bold,
     fontSize: 20
@@ -57,7 +65,7 @@ class _OTPpageState extends State<OTPpage> {
             Text('Resend code in 59 sec',
                 style: GoogleFonts.urbanist(
                   color: Colors.black),),
-                  
+                  Spacer(),
                   Button1(name: 'Verify', color1: rightbutton, func: (){
                     Navigator.push(context, MaterialPageRoute(builder: ((context) => Createpass())));
                   })
