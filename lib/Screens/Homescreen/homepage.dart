@@ -1,4 +1,9 @@
 
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:diet4u/Screens/Homescreen/Dietscreen.dart';
+import 'package:diet4u/Screens/Homescreen/workoutscreen.dart';
+import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/workoutcard.dart';
 import 'package:flutter/material.dart';
@@ -12,81 +17,70 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
+  int _currentIndex = 0;
+  PageController? _pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    _pageController!.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 5,
-showSelectedLabels: true,
-selectedItemColor: Colors.black,
-
-        items: [
-        BottomNavigationBarItem(icon: SvgPicture.asset('assets/logo.svg',height: 30,width: 40,),label: 'Fitness'),
-        BottomNavigationBarItem(icon: Icon(Icons.apple,size: 30,),label: 'Diet'),
-      ]),
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-
-      title: Text('Diet4U',style: GoogleFonts.urbanist(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold)),
-       centerTitle: true, 
-        leadingWidth: 200,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: Padding(
-          padding: const EdgeInsets.only(left:20.0),
-          child: Row(children: [
-           SvgPicture.asset('assets/logo.svg',height: 45,),
-           
-          ]),
-        ),
-        actions: [
-          CircleAvatar(
-            radius: 23,
-            backgroundColor: Colors.blue,
-          )
-        ],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.only(left:20.0,),
-        child: Column(
-          
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-                  padding: const EdgeInsets.only(top: 40),
-                  child: Heading2(text: 'Morning, Jack'),
-                  
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height*0.07,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text('Featured Workout',style: GoogleFonts.urbanist(fontSize: 17,color: Colors.black,fontWeight: FontWeight.bold)),
-                    TextButton(onPressed: (){},
-                     child:Text('See All',style: GoogleFonts.urbanist(fontSize: 17,fontWeight: FontWeight.bold) )),
-                     
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  height: 270,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Workoutcard(),
-                      SizedBox(width: 8,),
-                      Workoutcard(),
-                      SizedBox(width: 8,),
-                      Workoutcard(),
-                      SizedBox(width: 8,),
-                      Workoutcard(),
-                      SizedBox(width: 8,),
-                    ],
-                  ),
-                )
+     
+      body: SizedBox.expand(
+        child: PageView(
+          controller: _pageController,
+          onPageChanged: (index) {
+            setState(() => _currentIndex = index);
+          },
+          children: <Widget>[
+            Dietpage(),
+            Workoutpage(),
           ],
         ),
       ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20))),
+        child: BottomNavyBar(
+          itemCornerRadius: 80,
+          showElevation: true,
+          backgroundColor: Colors.white,
+          containerHeight: 65,
+          iconSize: 30,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          curve: Curves.easeOut,
+          selectedIndex: _currentIndex,
+          onItemSelected: (index) {
+            setState(() => _currentIndex = index);
+            _pageController!.jumpToPage(index);
+          },
+          items: <BottomNavyBarItem>[
+            BottomNavyBarItem(
+              title: Text('Workout',style: GoogleFonts.urbanist(fontSize: 15,color: Color(0xFF7552FF),fontWeight: FontWeight.bold)),
+              icon: Icon(Icons.home,color: Color(0xFF7552FF),),
+              activeColor: rightbutton,
+            ),
+            BottomNavyBarItem(
+              title: Text('Diet',style: GoogleFonts.urbanist(fontSize: 15,color: Color(0xFF7552FF),fontWeight: FontWeight.bold)),
+              icon: Icon(Icons.apps,color: Color(0xFF7552FF),),
+              activeColor: rightbutton,
+            ),
+            
+          ],
+        ),
+      ),
+    
     );
   }
 }
+
+
+
