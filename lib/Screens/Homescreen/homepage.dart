@@ -47,12 +47,12 @@ class _HomescreenState extends State<Homescreen> {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20))),
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30)),
         child: BottomNavyBar(
-          itemCornerRadius: 80,
+          itemCornerRadius: 100,
           showElevation: true,
-          backgroundColor: Colors.white,
+          backgroundColor: rightbutton,
           containerHeight: 65,
           iconSize: 30,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -64,14 +64,16 @@ class _HomescreenState extends State<Homescreen> {
           },
           items: <BottomNavyBarItem>[
             BottomNavyBarItem(
-              title: Text('Workout',style: GoogleFonts.urbanist(fontSize: 15,color: Color(0xFF7552FF),fontWeight: FontWeight.bold)),
-              icon: Icon(Icons.home,color: Color(0xFF7552FF),),
-              activeColor: rightbutton,
+              title: Text('Workout',style: GoogleFonts.urbanist(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold)),
+              icon: Icon(Icons.home,color: Colors.white,),
+              activeColor: Colors.black,
+              inactiveColor: Colors.white
             ),
             BottomNavyBarItem(
-              title: Text('Diet',style: GoogleFonts.urbanist(fontSize: 15,color: Color(0xFF7552FF),fontWeight: FontWeight.bold)),
-              icon: Icon(Icons.apps,color: Color(0xFF7552FF),),
-              activeColor: rightbutton,
+              title: Text('Diet',style: GoogleFonts.urbanist(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold)),
+              icon: Icon(Icons.apps,color: Colors.white,),
+              activeColor: Colors.black,
+              
             ),
             
           ],
