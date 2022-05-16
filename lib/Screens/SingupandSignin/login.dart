@@ -98,8 +98,8 @@ class _LoginwithmailState extends State<Loginwithmail> {
             GestureDetector(onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: ((context) => SMSorEmail())));
             },
-            child: Text('Forgot Password ?',
-            style: GoogleFonts.urbanist(fontSize: 14),)),
+            child: Text('Forgot Password?',
+            style: GoogleFonts.urbanist(fontSize: 14,color: rightbutton,fontWeight: FontWeight.bold),)),
             SizedBox(height: MediaQuery.of(context).size.height*0.08,),
             Row(mainAxisAlignment: MainAxisAlignment.center,
               

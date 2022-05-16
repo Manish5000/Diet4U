@@ -37,8 +37,10 @@ class _CreatepassState extends State<Createpass> {
             SizedBox(height: MediaQuery.of(context).size.height*0.050,),
             Textfield(
                 
-                text: 'Email',
-              prefixicon: Icons.mail,
+                text: 'Password',
+              prefixicon: Icons.lock,
+              Obscuretext: true,
+              suffixicon: Icon(Icons.remove_red_eye),
               keyboardtype: TextInputType.emailAddress,
               textinputaction: TextInputAction.next,
               isPassword: false,
@@ -48,10 +50,10 @@ class _CreatepassState extends State<Createpass> {
                   },
                   validatorr: (value){
                     if (value!.isEmpty) {
-                      return('Email is required for login');
+                      return('Create Password');
                     }
                     if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
-                      return("Please Enter a valid email ");
+                      return("Please create a new password");
                     }
                     // ignore: null_check_always_fails
                     return null!;
@@ -71,10 +73,10 @@ class _CreatepassState extends State<Createpass> {
                 validatorr: (value){
                   RegExp regex= RegExp(r'^.{6,}$');
                   if (value!.isEmpty) {
-                    return('Password is required for login');
+                    return('Confrm Password');
                   }
                   if (!regex.hasMatch(value)) {
-                    return("Password enter valid Password(Min. 6 Character");
+                    return("Enter password again");
                   }
                   // ignore: null_check_always_fails
                   return null!;
