@@ -1,9 +1,13 @@
+import 'dart:js';
+
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
+import 'package:diet4u/Widgets/dialogbox.dart';
 import 'package:diet4u/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 
 class Createpass extends StatefulWidget {
   const Createpass({ Key? key }) : super(key: key);
@@ -82,10 +86,21 @@ class _CreatepassState extends State<Createpass> {
                   return null!;
                 },),
                 Spacer(),
-                Button1(name: 'Continue', color1: rightbutton, func: (){})
+                Button1(name: 'Continue', color1: rightbutton, func: (){
+                 showDialog(context: context, builder: (builder){
+                   return Showdialog();
+                 });
+    }
+                ),               
           ],
         ),
-      ),   
+      ), 
+        
     );
+    
   }
+  
 }
+
+
+

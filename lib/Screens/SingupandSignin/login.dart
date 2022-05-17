@@ -2,6 +2,7 @@
 
 import 'package:diet4u/Screens/Accountsetup/profle.dart';
 import 'package:diet4u/Screens/ForgotAndResetPass/smsorEmail.dart';
+import 'package:diet4u/Screens/Homescreen/homepage.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
@@ -19,7 +20,7 @@ class Loginwithmail extends StatefulWidget {
 }
 
 class _LoginwithmailState extends State<Loginwithmail> {
-  final _formKey = GlobalKey<FormState>();
+  final  _formKey = GlobalKey<FormState>();
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   //editing controller
   final emailcontroller = TextEditingController();
@@ -44,18 +45,17 @@ class _LoginwithmailState extends State<Loginwithmail> {
               child: Heading2(text: 'Login to your Account'),
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.07,),
-            Textfield(
-              
-              text: 'Email',
-            prefixicon: Icons.mail,
-            keyboardtype: TextInputType.emailAddress,
-            textinputaction: TextInputAction.next,
-            isPassword: false,
-            controllerr: emailcontroller,
-                onsaved: (value){
+            TextFormField(
+            decoration: InputDecoration(
+              hintText: 'Email',
+             prefixIcon: Icon(Icons.mail)
+          
+            ),
+            controller: emailcontroller,
+                onSaved: (value){
                   emailcontroller.text = value!;
                 },
-                validatorr: (value){
+                validator: (value){
                   if (value!.isEmpty) {
                     return('Email is required for login');
                   }
@@ -63,37 +63,62 @@ class _LoginwithmailState extends State<Loginwithmail> {
                     return("Please Enter a valid email ");
                   }
                   // ignore: null_check_always_fails
-                  return null!;
-                },),
+                  return null;
+                }
+            ),
+            // Textfield(
+              
+            //   text: 'Email',
+            // prefixicon: Icons.mail,
+            // keyboardtype: TextInputType.emailAddress,
+            // textinputaction: TextInputAction.next,
+            // isPassword: false,
+            // controllerr: emailcontroller,
+            //     onsaved: (value){
+            //       emailcontroller.text = value!;
+            //     },
+            //     validatorr: (value){
+            //       if (value!.isEmpty) {
+            //         return('Email is required for login');
+            //       }
+            //       if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
+            //         return("Please Enter a valid email ");
+            //       }
+            //       // ignore: null_check_always_fails
+            //       return null!;
+            //     },),
             SizedBox(height: 15),
-            Textfield(
-              textinputaction: TextInputAction.done,
-              text: 'Password',
-              prefixicon: Icons.lock,
-              suffixicon: Icon(Icons.remove_red_eye),
-              Obscuretext: true,
-              isPassword: true,
-              controllerr: passwordcontroller,
-                onsaved: (value){
-                  passwordcontroller.text = value!;
+            TextFormField(
+            decoration: InputDecoration(
+              hintText: 'Password',
+             prefixIcon: Icon(Icons.mail)
+          
+            ),
+            controller: passwordcontroller,
+                onSaved: (value){
+                  emailcontroller.text = value!;
                 },
-                validatorr: (value){
-                  RegExp regex= RegExp(r'^.{6,}$');
-                  if (value!.isEmpty) {
-                    return('Password is required for login');
-                  }
-                  if (!regex.hasMatch(value)) {
-                    return("Password enter valid Password(Min. 6 Character");
-                  }
-                  // ignore: null_check_always_fails
-                  return null!;
-                },),
+                // validator: (value){
+                //   if (value!.isEmpty) {
+                //     return('Email is required for login');
+                //   }
+                //   if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
+                //     return("Please Enter a valid email ");
+                //   }
+                //   // ignore: null_check_always_fails
+                //   return null;
+                // }
+            ),
             SizedBox(height: MediaQuery.of(context).size.height*0.035,),
             Button1(name: 'Sign In', 
             color1: rightbutton, 
             func: (){
+              if(_formKey.currentState!.validate())
+  {
+    print('axasdaf');
+          
               signIn(emailcontroller.text, passwordcontroller.text);
-            }),
+  }}),
             SizedBox(height: MediaQuery.of(context).size.height*0.025,),
             GestureDetector(onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: ((context) => SMSorEmail())));
@@ -133,15 +158,15 @@ class _LoginwithmailState extends State<Loginwithmail> {
 
 
   void signIn(String email, String password) async{
-  if(_formKey.currentState!.validate())
-  {
+    print('adatytyt');
+  
     await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password)
     .then((uid) => {
       Fluttertoast.showToast(msg: "Login successful"),
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>FillProfile())),
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Homescreen())),
     }).catchError((e){
       Fluttertoast.showToast(msg:e!.message); 
     });
-  }
+  
 }
 }
