@@ -1,5 +1,6 @@
 import 'dart:ffi';
-
+import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
+import 'package:provider/provider.dart';
 import 'package:diet4u/Screens/SingupandSignin/login.dart';
 import 'package:diet4u/Screens/SingupandSignin/signup.dart';
 import 'package:diet4u/Widgets/button1.dart';
@@ -39,7 +40,14 @@ class _ChooseAccountState extends State<ChooseAccount> {
               Navigator.push(context,MaterialPageRoute(builder: (context) =>  Loginwithmail()));
             },),
             SizedBox(height: 10,),
-            Buttonarea(text: 'Conitnue with google', icon: FontAwesomeIcons.google,c: Colors.black,iconsize: 20,func: (){},),
+            Buttonarea(text: 'Conitnue with google', 
+            icon: FontAwesomeIcons.google,
+            c: Colors.black,
+            iconsize: 20,
+            func: (){
+              final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
+              provider.googleLogin();
+            },),
             SizedBox(height: MediaQuery.of(context).size.height*0.140,),
             Row(mainAxisAlignment: MainAxisAlignment.center,
             
