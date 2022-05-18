@@ -8,9 +8,11 @@ import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/workoutcard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class Homescreen extends StatefulWidget {
-  const Homescreen({ Key? key }) : super(key: key);
+   Homescreen({ Key? key }) : super(key: key);
 
   @override
   State<Homescreen> createState() => _HomescreenState();
@@ -19,6 +21,8 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   int _currentIndex = 0;
   PageController? _pageController;
+final  user = FirebaseAuth.instance.currentUser;
+
 
   @override
   void initState() {
@@ -34,7 +38,16 @@ class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
+     appBar: AppBar(
+       elevation: 0,
+       leading: null,
+       backgroundColor: Colors.white,
+       actions: [
+       CircleAvatar(
+         backgroundImage: NetworkImage(user!.photoURL.toString()),
+         radius: 30,
+       ),
+     ]),
       body: SizedBox.expand(
         child: PageView(
           controller: _pageController,
@@ -42,8 +55,9 @@ class _HomescreenState extends State<Homescreen> {
             setState(() => _currentIndex = index);
           },
           children: <Widget>[
-            Dietpage(),
             Workoutpage(),
+            Dietpage(),
+            
           ],
         ),
       ),
@@ -67,7 +81,7 @@ class _HomescreenState extends State<Homescreen> {
               title: Text('Workout',style: GoogleFonts.urbanist(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold)),
               icon: Icon(Icons.home,color: Colors.white,),
               activeColor: Colors.black,
-              inactiveColor: Colors.white
+              
             ),
             BottomNavyBarItem(
               title: Text('Diet',style: GoogleFonts.urbanist(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold)),

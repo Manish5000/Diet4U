@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/SingupandSignin/authentication.dart';
 import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/button2.dart';
@@ -57,7 +58,7 @@ class _FillProfileState extends State<FillProfile> {
                 Button2(name: 'Skip', buttoncolor: leftButton, func: (){}, textcolor: leftButtontext),
                 SizedBox(width: 20,),
                 Button2(name: 'Start', buttoncolor: rightbutton, func: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context) =>  ChooseAccount()));
+                  Navigator.push(context,MaterialPageRoute(builder: (context) =>  Authentication()));
                 }, textcolor: rightbuttontext),
               ],
             ),

@@ -9,7 +9,7 @@ import 'package:diet4u/Widgets/header2.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 class ChooseAccount extends StatefulWidget {
   const ChooseAccount({ Key? key }) : super(key: key);
 
@@ -26,54 +26,59 @@ class _ChooseAccountState extends State<ChooseAccount> {
         elevation: 0,
         backgroundColor: Colors.white,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left:20,top: 40) ,
-              child: Heading2(text: "Let's you in"),
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height*0.150,),
-            Buttonarea(text: 'Continue with E-mail',icon: Icons.mail,c: Colors.black,func: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context) =>  Loginwithmail()));
-            },),
-            SizedBox(height: 10,),
-            Buttonarea(text: 'Conitnue with google', 
-            icon: FontAwesomeIcons.google,
-            c: Colors.black,
-            iconsize: 20,
-            func: (){
-              final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
-              provider.googleLogin();
-            },),
-            SizedBox(height: MediaQuery.of(context).size.height*0.140,),
-            Row(mainAxisAlignment: MainAxisAlignment.center,
-            
+      body: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          return Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Expanded(
-                  child: Container(
-                    height: 1,
-                    decoration: BoxDecoration(color: Colors.black),
-                  ),
+                Padding(
+                  padding: const EdgeInsets.only(left:20,top: 40) ,
+                  child: Heading2(text: "Let's you in"),
                 ),
-                SizedBox(width: 5,),
-                Text('Or'),
-                SizedBox(width: 5,),
-                Expanded(
-                  child: Container(height: 1,
-                  decoration: BoxDecoration(color: Colors.black),),
-                ),
-            ],),
-            SizedBox(height: MediaQuery.of(context).size.height*0.150,),
-            Button1(name: 'Signup', color1: rightbutton, func: (){
-              Navigator.push(context, MaterialPageRoute(builder: ((context) => Signupwithmail()))); 
-            })
-
-            
-          ],
-        ),
+                SizedBox(height: MediaQuery.of(context).size.height*0.150,),
+                Buttonarea(text: 'Continue with E-mail',icon: Icons.mail,c: Colors.black,func: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context) =>  Loginwithmail()));
+                },),
+                SizedBox(height: 10,),
+                Buttonarea(text: 'Conitnue with google', 
+                icon: FontAwesomeIcons.google,
+                c: Colors.black,
+                iconsize: 20,
+                func: (){
+                  final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
+                  provider.googleLogin();
+                },),
+                SizedBox(height: MediaQuery.of(context).size.height*0.140,),
+                Row(mainAxisAlignment: MainAxisAlignment.center,
+                
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 1,
+                        decoration: BoxDecoration(color: Colors.black),
+                      ),
+                    ),
+                    SizedBox(width: 5,),
+                    Text('Or'),
+                    SizedBox(width: 5,),
+                    Expanded(
+                      child: Container(height: 1,
+                      decoration: BoxDecoration(color: Colors.black),),
+                    ),
+                ],),
+                SizedBox(height: MediaQuery.of(context).size.height*0.150,),
+                Button1(name: 'Signup', color1: rightbutton, func: (){
+                  Navigator.push(context, MaterialPageRoute(builder: ((context) => Signupwithmail()))); 
+                })
+      
+                
+              ],
+            ),
+          );
+        }
       ),
       
     );
