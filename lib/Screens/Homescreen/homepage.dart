@@ -5,6 +5,7 @@ import 'package:diet4u/Screens/Homescreen/Dietscreen.dart';
 import 'package:diet4u/Screens/Homescreen/workoutscreen.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
+import 'package:diet4u/Widgets/profiledialog.dart';
 import 'package:diet4u/Widgets/workoutcard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -44,9 +45,17 @@ final  user = FirebaseAuth.instance.currentUser;
        leading: null,
        backgroundColor: Colors.white,
        actions: [
-       CircleAvatar(
-         backgroundImage: NetworkImage(user!.photoURL.toString()),
-         radius: 30,
+         
+       GestureDetector(
+         onTap: (){
+            showDialog(context: context, builder: (builder){
+                   return Profiledialog();
+         });},
+         child: CircleAvatar(
+       
+           backgroundImage: NetworkImage(user!.photoURL.toString()),
+           radius: 30,
+         ),
        ),
      ]),
       body: SizedBox.expand(

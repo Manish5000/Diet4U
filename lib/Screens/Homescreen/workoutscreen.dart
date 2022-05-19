@@ -26,11 +26,16 @@ class _WorkoutpageState extends State<Workoutpage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-                  padding: const EdgeInsets.only(top: 40),
-                  child: Heading2(text: 'Morning, '+user!.displayName.toString()),
+                  padding: const EdgeInsets.only(top: 30),
+                  child: Row(
+                    children: [
+                      Heading2(text: 'Hello, '),
+                      Text(user!.displayName.toString(),style: GoogleFonts.urbanist(fontSize: 20,fontWeight: FontWeight.bold
+                   )) ],
+                  ),
                   
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height*0.07,),
+                SizedBox(height: MediaQuery.of(context).size.height*0.03,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
