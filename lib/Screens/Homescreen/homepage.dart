@@ -38,6 +38,7 @@ final  user = FirebaseAuth.instance.currentUser;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
      appBar: AppBar(
        elevation: 0,
        leading: null,

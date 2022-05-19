@@ -17,6 +17,7 @@ class _WorkoutpageState extends State<Workoutpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body:
       Padding(
         padding: const EdgeInsets.only(left:20.0,),
