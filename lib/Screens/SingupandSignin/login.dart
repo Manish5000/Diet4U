@@ -66,27 +66,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
                   return null;
                 }
             ),
-            // Textfield(
-              
-            //   text: 'Email',
-            // prefixicon: Icons.mail,
-            // keyboardtype: TextInputType.emailAddress,
-            // textinputaction: TextInputAction.next,
-            // isPassword: false,
-            // controllerr: emailcontroller,
-            //     onsaved: (value){
-            //       emailcontroller.text = value!;
-            //     },
-            //     validatorr: (value){
-            //       if (value!.isEmpty) {
-            //         return('Email is required for login');
-            //       }
-            //       if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
-            //         return("Please Enter a valid email ");
-            //       }
-            //       // ignore: null_check_always_fails
-            //       return null!;
-            //     },),
+            
             SizedBox(height: 15),
             TextFormField(
             decoration: InputDecoration(
@@ -98,16 +78,16 @@ class _LoginwithmailState extends State<Loginwithmail> {
                 onSaved: (value){
                   emailcontroller.text = value!;
                 },
-                // validator: (value){
-                //   if (value!.isEmpty) {
-                //     return('Email is required for login');
-                //   }
-                //   if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
-                //     return("Please Enter a valid email ");
-                //   }
-                //   // ignore: null_check_always_fails
-                //   return null;
-                // }
+                 validator: (value){
+                RegExp regex= RegExp(r'^.{6,}$');
+                if (value!.isEmpty) {
+                  return('Please is required for login');
+                }
+                if (!regex.hasMatch(value)) {
+                  return("Password enter valid Password(Min. 6 Character");
+                }
+                return null!;
+              },
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.035,),
             Button1(name: 'Sign In', 
@@ -115,7 +95,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
             func: (){
               if(_formKey.currentState!.validate())
   {
-    print('axasdaf');
+ 
           
               signIn(emailcontroller.text, passwordcontroller.text);
   }}),
@@ -158,8 +138,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
 
 
   void signIn(String email, String password) async{
-    print('adatytyt');
-  
+    
     await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password)
     .then((uid) => {
       Fluttertoast.showToast(msg: "Login successful"),

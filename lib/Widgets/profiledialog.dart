@@ -1,10 +1,12 @@
 import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
+import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class Profiledialog extends StatefulWidget {
-  const Profiledialog({ Key? key }) : super(key: key);
+
 
   @override
   State<Profiledialog> createState() => _ProfiledialogState();
@@ -68,7 +70,13 @@ children: [
           ),
         ),
         SizedBox(height: MediaQuery.of(context).size.height*0.300,),
-Buttonarea(text: 'Logout', icon: FontAwesomeIcons.arrowRightFromBracket,c: Colors.black,func: (){},)
+Buttonarea(text: 'Logout', icon: FontAwesomeIcons.arrowRightFromBracket,c: Colors.black,func: (){
+  final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
+  provider.logout();
+  if(provider.logout() == false){
+    Navigator.pop(context);
+  }
+},)
       ],
     ),
   )

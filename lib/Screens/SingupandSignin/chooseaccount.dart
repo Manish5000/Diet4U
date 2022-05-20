@@ -1,4 +1,4 @@
-import 'dart:ffi';
+
 import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:diet4u/Screens/SingupandSignin/login.dart';
@@ -96,7 +96,7 @@ class Buttonarea extends StatefulWidget {
   final VoidCallback? func;
 
   
-  const Buttonarea({ @required this.text, @required this.icon,this.func, this.c,this.iconsize});
+   Buttonarea({ @required this.text, @required this.icon,this.func, this.c,this.iconsize});
 
   @override
   State<Buttonarea> createState() => _ButtonareaState();

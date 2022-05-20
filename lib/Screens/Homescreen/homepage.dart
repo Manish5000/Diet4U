@@ -13,7 +13,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Homescreen extends StatefulWidget {
-   Homescreen({ Key? key }) : super(key: key);
+  const Homescreen({Key? key}) : super(key: key);
+
+  
 
   @override
   State<Homescreen> createState() => _HomescreenState();
@@ -53,7 +55,7 @@ final  user = FirebaseAuth.instance.currentUser;
          GestureDetector(
            onTap: (){
               showDialog(context: context, builder: (builder){
-                     return Profiledialog();
+                     return  Profiledialog();
            });},
            child: Padding(
              padding: EdgeInsets.only(top: 15,right: 15),
