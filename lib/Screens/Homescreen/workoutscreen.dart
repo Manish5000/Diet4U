@@ -21,48 +21,80 @@ class _WorkoutpageState extends State<Workoutpage> {
       body:
       Padding(
         padding: const EdgeInsets.only(left:20.0,),
-        child: Column(
-          
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-                  padding: const EdgeInsets.only(top: 30),
-                  child: Row(
-                    children: [
-                      Heading2(text: 'Hello, '),
-                      Text(user!.displayName.toString(),style: GoogleFonts.urbanist(fontSize: 20,fontWeight: FontWeight.bold
-                   )) ],
-                  ),
-                  
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height*0.03,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text('Featured Workout',style: GoogleFonts.urbanist(fontSize: 17,color: Colors.black,fontWeight: FontWeight.bold)),
-                    TextButton(onPressed: (){},
-                     child:Text('See All',style: GoogleFonts.urbanist(fontSize: 17,fontWeight: FontWeight.bold) )),
-                     
-                  ],
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  height: 270,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Workoutcard(),
-                      SizedBox(width: 8,),
-                      Workoutcard(),
-                      SizedBox(width: 8,),
-                      Workoutcard(),
-                      SizedBox(width: 8,),
-                      Workoutcard(),
-                      SizedBox(width: 8,),
-                    ],
-                  ),
-                )
-          ],
+        child: Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                      padding: const EdgeInsets.only(top: 30),
+                      child: Row(
+                        children: [
+                          Heading2(text: 'Hello, '),
+                          Text(user!.displayName.toString(),style: GoogleFonts.urbanist(fontSize: 20,fontWeight: FontWeight.bold
+                       )) ],
+                      ),
+                      
+                    ),
+                    SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text('Featured Workout',style: GoogleFonts.urbanist(fontSize: 17,color: Colors.black,fontWeight: FontWeight.bold)),
+                        TextButton(onPressed: (){},
+                         child:Text('See All',style: GoogleFonts.urbanist(fontSize: 17,fontWeight: FontWeight.bold) )),
+                         
+                      ],
+                    ),
+                    SizedBox(height: MediaQuery.of(context).size.height*0.02,),
+                    Container(
+                      height: 270,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          Workoutcard(),
+                          SizedBox(width: 15,),
+                          Workoutcard(),
+                          SizedBox(width: 10,),
+                          Workoutcard(),
+                          SizedBox(width: 10,),
+                          Workoutcard(),
+                          SizedBox(width: 10,),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20,top: 20),
+                      child: Column(
+                        children: [
+                           Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text('Workout Level',style: GoogleFonts.urbanist(fontSize: 17,color: Colors.black,fontWeight: FontWeight.bold)),
+                        TextButton(onPressed: (){},
+                         child:Text('See All',style: GoogleFonts.urbanist(fontSize: 17,fontWeight: FontWeight.bold) )),
+                         
+                      ],
+                    ),
+                          Container(
+                            height: MediaQuery.of(context).size.height*0.200,
+                            width: MediaQuery.of(context).size.width,
+                            child: Workoutcard(),
+                          ),
+                          Container(
+                            height: MediaQuery.of(context).size.height*0.200,
+                            width: MediaQuery.of(context).size.width,
+                            child: Workoutcard(),
+                          ),
+                          
+                        ],
+                      ),
+                    )
+                    
+              ],
+            ),
+          ),
         ),
       ),
     );

@@ -40,24 +40,32 @@ final  user = FirebaseAuth.instance.currentUser;
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-     appBar: AppBar(
-       elevation: 0,
-       leading: null,
-       backgroundColor: Colors.white,
-       actions: [
+     appBar: PreferredSize(
+       preferredSize: Size.fromHeight(70),
+       child: AppBar(
          
-       GestureDetector(
-         onTap: (){
-            showDialog(context: context, builder: (builder){
-                   return Profiledialog();
-         });},
-         child: CircleAvatar(
-       
-           backgroundImage: NetworkImage(user!.photoURL.toString()),
-           radius: 30,
+         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+         elevation: 3,
+         leading: null,
+         backgroundColor: Colors.white,
+         actions: [
+           
+         GestureDetector(
+           onTap: (){
+              showDialog(context: context, builder: (builder){
+                     return Profiledialog();
+           });},
+           child: Padding(
+             padding: EdgeInsets.only(top: 15,right: 15),
+             child: CircleAvatar(
+                    
+               backgroundImage: NetworkImage(user!.photoURL.toString()),
+               radius: 20,
+             ),
+           ),
          ),
-       ),
-     ]),
+       ]),
+     ),
       body: SizedBox.expand(
         child: PageView(
           controller: _pageController,
