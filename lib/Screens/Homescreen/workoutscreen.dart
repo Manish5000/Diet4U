@@ -1,4 +1,5 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:diet4u/Screens/Homescreen/Workouttype.dart';
 import 'package:diet4u/Screens/Homescreen/Workoutlevel/beginner.dart';
 import 'package:diet4u/Screens/Homescreen/Workoutlevel/intermediate.dart';
 import 'package:diet4u/Screens/Homescreen/homepage.dart';
@@ -129,7 +130,9 @@ class _WorkoutpageState extends State<Workoutpage> {
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold)),
                         TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context,MaterialPageRoute(builder: (context) =>  WorkoutData()));
+                            },
                             child: Text('See All',
                                 style: GoogleFonts.urbanist(
                                     fontSize: 16,
