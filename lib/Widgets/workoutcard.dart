@@ -15,7 +15,7 @@ class _WorkoutcardState extends State<Workoutcard> {
       width: 250,
       decoration:BoxDecoration(color: Colors.redAccent,
       image: DecorationImage(image: AssetImage('assets/welcome1.jpg'),fit: BoxFit.fill),
-      borderRadius: BorderRadius.circular(30)) ,
+      borderRadius: BorderRadius.circular(40)) ,
       child: Padding(
         padding: const EdgeInsets.only(left:15,bottom: 25),
         child: Align(

@@ -1,14 +1,19 @@
 import 'dart:async';
 
+import 'package:diet4u/Screens/Homescreen/homepage.dart';
 import 'package:diet4u/Screens/Onboarding/welcome1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-
+import 'package:diet4u/Screens/Homescreen/homepage.dart';
+import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 class splashscreen extends StatefulWidget {
-  
-
+  final Widget? nextscreen;
+const splashscreen({@required this.nextscreen});
   @override
   State<splashscreen> createState() => _splashscreenState();
 }
@@ -23,7 +28,16 @@ class _splashscreenState extends State<splashscreen> {
   changeScreen() {
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (builder) {
-        return Welcome1();
+        return  StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot){
+          if (snapshot.hasData) {
+            return Homescreen();
+          } else{
+            return ChooseAccount();
+          }
+         
+        });
       }));
     });
   }
