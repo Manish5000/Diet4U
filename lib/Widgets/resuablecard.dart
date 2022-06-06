@@ -22,30 +22,31 @@ class _ReuseableCardState extends State<ReuseableCard> {
     return GestureDetector(
       onTap: widget.ontap,
       child: Padding(
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.only(bottom: 10),
         child: Container(
           decoration: BoxDecoration(
-            color: Color(0xFF7552FF),
-              borderRadius: BorderRadius.circular(20), border: Border.all()),
-          height: 130,
+            color: Color(0xFFf0ecff),
+              borderRadius: BorderRadius.circular(30), border: Border.all(color: Color(0xFFf0ecff),width: 0)),
+          height: MediaQuery.of(context).size.height*0.140,
           width: MediaQuery.of(context).size.width,
           child: Row(children: [
             Padding(
-              padding: const EdgeInsets.only(left:8.0),
-              child: ClipRRect(borderRadius: BorderRadius.circular(15),
+              padding: const EdgeInsets.only(left:0),
+              child: ClipRRect(borderRadius: BorderRadius.circular(30),
                 child: Image(
+                  fit: BoxFit.fill,
                   image: AssetImage(
                     widget.assetimage!,
                   ),
-                  width: 100,
-                  height: 100,
+                  width: MediaQuery.of(context).size.width*0.270,
+                  height: MediaQuery.of(context).size.height*0.200,
                 ),
               ),
             ),
             SizedBox(
               width: 20,
             ),
-            Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 30,fontWeight: FontWeight.bold),)
+            Text(widget.name!,style: GoogleFonts.urbanist(fontSize: 20,fontWeight: FontWeight.bold,),)
           ]),
         ),
       ),

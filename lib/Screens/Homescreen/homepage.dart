@@ -1,8 +1,8 @@
 
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:diet4u/Screens/Homescreen/Dietscreen.dart';
-import 'package:diet4u/Screens/Homescreen/workoutscreen.dart';
+import 'package:diet4u/Screens/Homescreen/Diet/Dietscreen.dart';
+import 'package:diet4u/Screens/Homescreen/Workout/workoutscreen.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/profiledialog.dart';
@@ -41,14 +41,23 @@ final  user = FirebaseAuth.instance.currentUser;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       backgroundColor: Colors.white,
      appBar: PreferredSize(
        preferredSize: Size.fromHeight(70),
        child: AppBar(
-         
+         leading: Row(
+           mainAxisAlignment: MainAxisAlignment.start,
+           children: [
+             Padding(
+               padding: const EdgeInsets.only(left: 20,top: 20),
+               child: Image.asset('assets/logo2.png',height: 35,),
+             ),
+           ],
+         ),
          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-         elevation: 3,
-         leading: null,
+         elevation: 0,
+        //  leading: ,
          backgroundColor: Colors.white,
          actions: [
            
@@ -59,10 +68,14 @@ final  user = FirebaseAuth.instance.currentUser;
            });},
            child: Padding(
              padding: EdgeInsets.only(top: 15,right: 15),
-             child: CircleAvatar(
-                    
-               backgroundImage: NetworkImage(user!.photoURL.toString()),
-               radius: 20,
+             child: Row(
+               children: [
+                 CircleAvatar(
+                        
+                   backgroundImage: NetworkImage(user!.photoURL.toString()),
+                   radius: 20,
+                 ),
+               ],
              ),
            ),
          ),

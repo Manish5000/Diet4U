@@ -71,6 +71,7 @@ children: [
         ),
         SizedBox(height: MediaQuery.of(context).size.height*0.300,),
 Buttonarea(text: 'Logout', icon: FontAwesomeIcons.arrowRightFromBracket,c: Colors.black,func: (){
+  Navigator.pop(context);
   final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
   provider.logout();
  
