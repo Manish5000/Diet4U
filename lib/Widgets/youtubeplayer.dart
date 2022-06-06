@@ -3,19 +3,21 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 class Youtubepage extends StatefulWidget {
-  const Youtubepage({ Key? key }) : super(key: key);
+  final String? youtubelink;
+   Youtubepage({ this.youtubelink });
 
   @override
   State<Youtubepage> createState() => _YoutubepageState();
 }
 
 class _YoutubepageState extends State<Youtubepage> {
-  late YoutubePlayerController controller;
+  
+  late  YoutubePlayerController controller;
   @override
   void initState(){
     super.initState();
-    const url = 'https://www.youtube.com/watch?v=8GH9YsnHr60';
-    controller = YoutubePlayerController(initialVideoId: YoutubePlayer.convertUrlToId(url)!);
+    
+    controller = YoutubePlayerController(initialVideoId: YoutubePlayer.convertUrlToId(widget.youtubelink!)!);
   }
   @override
   void deactivate(){

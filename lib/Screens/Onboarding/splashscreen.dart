@@ -26,7 +26,7 @@ class _splashscreenState extends State<splashscreen> {
   }
 
   changeScreen() {
-    Timer(const Duration(seconds: 1000), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (builder) {
         return  StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),

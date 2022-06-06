@@ -30,7 +30,9 @@ class _BackState extends State<Back> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Chin-Ups',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Chin-Ups',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: '',)));
+              },),
               SizedBox(
                 height: 10,
               ),

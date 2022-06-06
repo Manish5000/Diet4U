@@ -30,41 +30,66 @@ class _ChestState extends State<Chest> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Push-Ups',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Barbell Bench Press',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage()));
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Push-Ups',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://youtu.be/QZpkHcIx5p8',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Dumbbell Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/running.png', name: 'Barbell Bench Press',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=zISjOLBowKE&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=1',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Inclined Bench Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Dumbbell Press',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=6fPc_2IJCDQ&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=2',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Inclined Dumbbell Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Inclined Bench Press',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=aXWMb1A8344&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=3',)));
+              },),
+              SizedBox(
+                height: 10,
+              ),
+              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Inclined Dumbbell Press',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=i-oub4-O4Bo&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=4',)));
+              },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Declined Bench Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Declined Bench Press',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=JDG9G1RUpjA&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=9',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Declined Dumbbell Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Declined Dumbbell Press',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=FNhiddLToeY&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=10',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Machine Fly',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Machine Fly',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=j9u9NR4lHxI&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=5',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Cable Cross-over',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Cable Cross-over',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=OWtD7iOwK2U&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=7',)));
+              },),
             ]),
           ),
         ),
