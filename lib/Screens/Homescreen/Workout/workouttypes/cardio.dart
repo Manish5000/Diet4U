@@ -31,6 +31,10 @@ class _CardioState extends State<Cardio> {
               SizedBox(
                 height: 15,
               ),
+              ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'Overall Cardio',ontap: (){},),
+              SizedBox(
+                height: 10,
+              ),
               ReuseableCard(assetimage: 'assets/running.png', name: 'Running',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage()));
               },),

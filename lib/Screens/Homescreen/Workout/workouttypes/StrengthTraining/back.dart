@@ -30,37 +30,34 @@ class _BackState extends State<Back> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Chin-Ups',ontap: (){
+              ReuseableCard(assetimage: 'assets/chinups.jpg', name: 'Chin-Ups',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: '',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Lat Pull Down',ontap: (){},),
+              
+              ReuseableCard(assetimage: 'assets/latswidegrip.jpg', name: 'Lat Pull Down\nWide Grip',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Lat Pull Down\nWide Grip',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/bentover.jpg', name: 'Bent Over',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Bent Over',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Lat Pull Down\nV-Grip',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/latsvgrip.jpg', name: 'Lat Pull Down\nV-Grip',ontap: (){},),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Lat Pull Down\nReverse Grip',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/latsreversegrip.jpg', name: 'Lat Pull Down\nReverse Grip',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Rowing Dumbbell',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/rowingdumbbell.jpg', name: 'Rowing Dumbbell',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Rowing Close Grip',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/rowingclosegrip.jpg', name: 'Rowing Close Grip',ontap: (){},),
               
             ]),
           ),

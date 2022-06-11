@@ -30,35 +30,35 @@ class _BicepsState extends State<Biceps> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'barbell Curl',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/barbellcurl.jpg', name: 'barbell Curl',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Dumbbell Curl',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/dumbbellcurl.jpg', name: 'Dumbbell Curl',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Inclined Dumbbell Curl',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/inclinedcurl.jpg', name: 'Inclined Dumbbell Curl',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'EZ Preacher Curl',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/preachercurl.jpg', name: 'EZ Preacher Curl',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Close Grip',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/barbellcurl.jpg', name: 'Close Grip',ontap: (){},),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Single Arm Preacher\nCurl',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/singlearmpreacher.jpg', name: 'Single Arm Preacher\nCurl',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Concentration Curl',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/concentrationcurl.jpg', name: 'Concentration Curl',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Hammer Curl',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/hammercurl.jpg', name: 'Hammer Curl',ontap: (){},),
               
             ]),
           ),

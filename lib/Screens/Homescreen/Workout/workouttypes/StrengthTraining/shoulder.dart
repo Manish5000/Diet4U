@@ -30,31 +30,31 @@ class _ShoulderState extends State<Shoulder> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'barbell Seated Row',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/barbellpress.jpg', name: 'barbell Seated Row',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Dumbbell Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/dumbbellpress.jpg', name: 'Dumbbell Press',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Arnold Dumbbell Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/arnoldpress.jpg', name: 'Arnold Dumbbell Press',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Dumbbell Front Raises',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/frontraises.jpg', name: 'Dumbbell Front Raises',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Lateral Raises',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sidelateralraises.jpg', name: 'Lateral Raises',ontap: (){},),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Barbell Upright',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/cableupright.jpg', name: 'Cable Upright',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Machine Reverse Flyes',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/reversefly.jpg', name: 'Machine Reverse Flyes',ontap: (){},),
               
               
             ]),

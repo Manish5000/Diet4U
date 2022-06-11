@@ -30,31 +30,31 @@ class _LegState extends State<Leg> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Barbell Squats',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/barbellsquats.jpg', name: 'Barbell Squats',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Leg Extention',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/legextention.jpg', name: 'Leg Extention',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Lying Leg Curl',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/lyinglegcurl.jpg', name: 'Lying Leg Curl',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Smith Machine Squat',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/smithsquats.webp', name: 'Smith Machine Squat',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Hack Squats',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/hacksquats.png', name: 'Hack Squats',ontap: (){},),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Leg Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/legpress.jpg', name: 'Leg Press',ontap: (){},),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Stepping Lunges',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/lunges.jpg', name: 'Stepping Lunges',ontap: (){},),
               
               
             ]),

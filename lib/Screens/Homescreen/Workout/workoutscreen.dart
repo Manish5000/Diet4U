@@ -3,6 +3,9 @@ import 'package:diet4u/Screens/Homescreen/Workout/Workoutlevel/advnaced.dart';
 import 'package:diet4u/Screens/Homescreen/Workout/Workoutlevel/beginner.dart';
 import 'package:diet4u/Screens/Homescreen/Workout/Workoutlevel/intermediate.dart';
 import 'package:diet4u/Screens/Homescreen/Workout/Workouttype.dart';
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/stretching.dart';
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/weightlifting.dart';
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/yoga.dart';
 import 'package:diet4u/Screens/Homescreen/homepage.dart';
 import 'package:diet4u/Widgets/button2.dart';
 import 'package:diet4u/Widgets/constant.dart';
@@ -99,15 +102,21 @@ class _WorkoutpageState extends State<Workoutpage> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Workoutcard(text: 'Body Stretching',image: AssetImage('assets/stretching1.jpg')),
+                    Workoutcard(text: 'Body Stretching',image: AssetImage('assets/stretching1.jpg'),func: (){
+                       Navigator.push(context,MaterialPageRoute(builder: (context) =>  Stretching()));
+                    }),
                     SizedBox(
                       width: 15,
                     ),
-                    Workoutcard(text: 'Weight Lifting',image: AssetImage('assets/weightlifting1.jpg'),),
+                    Workoutcard(text: 'Weight Lifting',image: AssetImage('assets/weightlifting1.jpg'),func: (){
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => Weightlifting()));
+                    }),
                     SizedBox(
                       width: 15,
                     ),
-                    Workoutcard(text: 'Yoga',image: AssetImage('assets/yoga1.jpg'),),
+                    Workoutcard(text: 'Yoga',image: AssetImage('assets/yoga1.jpg'),func: (){
+                      Navigator.push(context,MaterialPageRoute(builder: (context) =>  Yoga()));
+                    },),
                     SizedBox(
                       width: 15,
                     ),

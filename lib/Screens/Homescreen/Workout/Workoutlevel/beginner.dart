@@ -1,3 +1,5 @@
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/stretching.dart';
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/yoga.dart';
 import 'package:diet4u/Widgets/workoutcard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -16,8 +18,12 @@ class _BeginnerState extends State<Beginner> {
       child: ListView(
         scrollDirection: Axis.vertical,
         children: [
-          Workoutcard(text: 'Yoga',image: AssetImage('assets/yoga1.jpg'),),        
-          Workoutcard(text: 'Stretching',image: AssetImage('assets/stretching1.jpg'),)
+          Workoutcard(text: 'Yoga',image: AssetImage('assets/yoga1.jpg'),func: (){
+            Navigator.push(context,MaterialPageRoute(builder: (context) =>  Yoga()));
+          },),        
+          Workoutcard(text: 'Stretching',image: AssetImage('assets/stretching1.jpg'),func: (){
+             Navigator.push(context,MaterialPageRoute(builder: (context) =>  Stretching()));
+          },)
         ],
           
           

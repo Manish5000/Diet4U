@@ -1,6 +1,8 @@
 import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/cardio.dart';
 import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/StrengthTraining/strengthtraining.dart';
 import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/stretching.dart';
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/weightlifting.dart';
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/yoga.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -47,12 +49,14 @@ class _WorkoutDataState extends State<WorkoutData> {
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/weight.jpg', name: 'Weight Lifting',ontap: (){
-                
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Weightlifting()));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/yoga.jpg', name: 'Yoga',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/yoga.jpg', name: 'Yoga',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Yoga()));
+              },),
                SizedBox(
                 height: 10,
               ),

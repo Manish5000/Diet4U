@@ -24,11 +24,11 @@ class _DietpageState extends State<Dietpage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-                  padding: const EdgeInsets.only(top: 40),
-                  child: Heading2(text: 'Morning, Jack'),
+                  padding: const EdgeInsets.only(top: 30),
+                  child: Heading2(text: 'Hello, Jack'),
                   
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height*0.07,),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -46,11 +46,11 @@ class _DietpageState extends State<Dietpage> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      Workoutcard(text: 'High Protien',image: AssetImage('assets/protiendiet.jpg'),),
+                      Workoutcard(text: 'High Protien',image: AssetImage('assets/protiendiet.jpg'),func: (){},),
                       SizedBox(width: 15,),
-                      Workoutcard(text: 'Low Carbohydrate',image: AssetImage('assets/lowcarbsdiet.jpg'),),
+                      Workoutcard(text: 'Low Carbohydrate',image: AssetImage('assets/lowcarbsdiet.jpg'),func: (){},),
                       SizedBox(width: 15,),
-                      Workoutcard(text: 'Low Fat',image: AssetImage('assets/lowfatdiet.jpg'),),
+                      Workoutcard(text: 'Low Fat',image: AssetImage('assets/lowfatdiet.jpg'),func: (){},),
                       
                     ],
                   ),

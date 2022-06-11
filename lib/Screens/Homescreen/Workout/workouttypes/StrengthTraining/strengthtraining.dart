@@ -37,37 +37,37 @@ class _StrengthTrainingState extends State<StrengthTraining> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/.jpg', name: 'Chest Workout',ontap: (){
+              ReuseableCard(assetimage: 'assets/chestworkout.jpg', name: 'Chest Workout',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Chest()));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Tricep Workout',ontap: (){
+              ReuseableCard(assetimage: 'assets/dipsonbench.jpg', name: 'Tricep Workout',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Tricep()));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Back Workout',ontap: (){
+              ReuseableCard(assetimage: 'assets/latswidegrip.jpg', name: 'Back Workout',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Back()));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Bicep Workout',ontap: (){
+              ReuseableCard(assetimage: 'assets/biceps.jpg', name: 'Bicep Workout',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Biceps()));
               },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Shoulder Workout',ontap: (){
+              ReuseableCard(assetimage: 'assets/arnoldpress.jpg', name: 'Shoulder Workout',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Shoulder()));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Leg Workout',ontap: (){
+              ReuseableCard(assetimage: 'assets/barbellsquats.jpg', name: 'Leg Workout',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Leg()));
               },),
             ]),
