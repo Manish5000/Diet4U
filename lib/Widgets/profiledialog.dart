@@ -1,5 +1,6 @@
 import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
 import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
+import 'package:diet4u/bmi/screens/calculator_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -44,6 +45,19 @@ children: [
               Icon(FontAwesomeIcons.user,color: Colors.black,size: 17,),
               SizedBox(width: MediaQuery.of(context).size.width*0.050,),
               Text('Profile',style: GoogleFonts.urbanist(fontSize: 18,color: Colors.black,fontWeight: FontWeight.normal),),
+            ],
+          ),
+        ),
+        SizedBox(height: MediaQuery.of(context).size.height*0.040,),
+        GestureDetector(
+          onTap: (){
+            Navigator.push(context,MaterialPageRoute(builder: (context) =>  CalculatorScreen()));
+          },
+          child: Row(
+            children: [
+              Icon(FontAwesomeIcons.user,color: Colors.black,size: 17,),
+              SizedBox(width: MediaQuery.of(context).size.width*0.050,),
+              Text('BMI Calculator',style: GoogleFonts.urbanist(fontSize: 18,color: Colors.black,fontWeight: FontWeight.normal),),
             ],
           ),
         ),

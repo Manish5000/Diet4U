@@ -30,49 +30,49 @@ class _ShoulderState extends State<Shoulder> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'barbell Seated Row',ontap: (){
+              ReuseableCard(assetimage: 'assets/barbellpress.jpg', name: 'barbell Seated Row',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>
                  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=l7xQ7JhaYTE&list=PLhnZygL_8ZFQgHRVkXAFRQv98d8n76k2v&index=2',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Dumbbell Press',ontap: (){
+              ReuseableCard(assetimage: 'assets/dumbbellpress.jpg', name: 'Dumbbell Press',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
                  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=M88OYNtB4Lo&list=PLhnZygL_8ZFQgHRVkXAFRQv98d8n76k2v&index=4',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Arnold Dumbbell Press',ontap: (){
+              ReuseableCard(assetimage: 'assets/arnoldpress.jpg', name: 'Arnold Dumbbell Press',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
                  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=0MdjydCcYNk&list=PLhnZygL_8ZFQgHRVkXAFRQv98d8n76k2v&index=1',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Dumbbell Front Raises',ontap: (){
+              ReuseableCard(assetimage: 'assets/frontraises.jpg', name: 'Dumbbell Front Raises',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
                  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=qyw3BwRcroM&list=PLhnZygL_8ZFQgHRVkXAFRQv98d8n76k2v&index=5',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Lateral Raises',ontap: (){
+              ReuseableCard(assetimage: 'assets/sidelateralraises.jpg', name: 'Lateral Raises',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
                  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=BV80TveYlc4&list=PLhnZygL_8ZFQgHRVkXAFRQv98d8n76k2v&index=7',)));
               },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Barbell Upright',ontap: (){
+              ReuseableCard(assetimage: 'assets/cableupright.jpg', name: 'Barbell Upright',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
                  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=N8Gb3gKS1mo&list=PLhnZygL_8ZFQgHRVkXAFRQv98d8n76k2v&index=3',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Machine Reverse Flyes',ontap: (){
+              ReuseableCard(assetimage: 'assets/reversefly.jpg', name: 'Machine Reverse Flyes',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
                  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=QzTXnP_PbQQ&list=PLhnZygL_8ZFQgHRVkXAFRQv98d8n76k2v&index=8',)));
               },),

@@ -30,78 +30,50 @@ class _BicepsState extends State<Biceps> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/barbellcurl.jpg', name: 'barbell Curl',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/dumbbellcurl.jpg', name: 'Dumbbell Curl',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/inclinedcurl.jpg', name: 'Inclined Dumbbell Curl',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/preachercurl.jpg', name: 'EZ Preacher Curl',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/barbellcurl.jpg', name: 'Close Grip',ontap: (){},),
-               SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/singlearmpreacher.jpg', name: 'Single Arm Preacher\nCurl',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/concentrationcurl.jpg', name: 'Concentration Curl',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/hammercurl.jpg', name: 'Hammer Curl',ontap: (){},),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'barbell Curl',ontap: (){
+              ReuseableCard(assetimage: 'assets/barbellcurl.jpg', name: 'barbell Curl',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=P52EFWUcwEM&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Dumbbell Curl',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=I47EaqoWtVo&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=6',)));
+              ReuseableCard(assetimage: 'assets/dumbbellcurl.jpg', name: 'Dumbbell Curl',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=I47EaqoWtVo&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=6',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Inclined Dumbbell Curl',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=6RkIRQZxNko&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=5',)));
+              ReuseableCard(assetimage: 'assets/inclinedcurl.jpg', name: 'Inclined Dumbbell Curl',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=6RkIRQZxNko&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=5',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'EZ Preacher Curl',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=gjCEknrROWE&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=3',)));
+              ReuseableCard(assetimage: 'assets/preachercurl.jpg', name: 'EZ Preacher Curl',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=gjCEknrROWE&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=3',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Close Grip',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=sxc6B6SgJEU&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=2',)));
+              ReuseableCard(assetimage: 'assets/barbellcurl.jpg', name: 'Close Grip',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=sxc6B6SgJEU&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=2',)));
               },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Single Arm Preacher\nCurl',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=xjVf8bdMyLA&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=7',)));
+              ReuseableCard(assetimage: 'assets/singlearmpreacher.jpg', name: 'Single Arm Preacher\nCurl',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=xjVf8bdMyLA&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=7',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              // ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Concentration Curl',ontap: (){
-              //   Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: '',)));
-              // },),
-              // SizedBox(
-              //   height: 10,
-              // ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Hammer Curl',ontap: (){
+              ReuseableCard(assetimage: 'assets/concentrationcurl.jpg', name: 'Concentration Curl',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: '',)));
+              },),
+              SizedBox(
+                height: 10,
+              ),
+              
+              ReuseableCard(assetimage: 'assets/hammercurl.jpg', name: 'Hammer Curl',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=8MTG37RavbA&list=PLhnZygL_8ZFTY8jx38YMEIIiFPmrD4Wir&index=4',)));
               },),
               

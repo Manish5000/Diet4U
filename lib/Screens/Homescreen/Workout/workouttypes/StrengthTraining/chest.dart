@@ -32,7 +32,11 @@ class _ChestState extends State<Chest> {
               ),
               ReuseableCard(assetimage: 'assets/pushups.jpg', name: 'Push-Ups',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://youtu.be/QZpkHcIx5p8',)));
+                 Youtubepage(youtubelink: 'https://youtu.be/QZpkHcIx5p8',
+                heading: 'Push-ups',
+                description: "Push-ups are exercises to strengthen your arms and chest muscles. They are done by lying with your face towards the floor and pushing with your hands to raise your body until your arms are straight. Get on the floor on all fours, positioning your hands slightly wider than your shoulders. Don't lock out the elbows; keep them slightly bent. Extend your legs back so you are balanced on your hands and toes, your feet hip-width apart.",
+                 
+                 )));
               },),
               SizedBox(
                 height: 10,

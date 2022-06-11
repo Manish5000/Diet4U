@@ -7,6 +7,7 @@ import 'package:diet4u/bmi/utils/calculate_bmi.dart';
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'result_screen.dart';
 
@@ -29,7 +30,13 @@ class CalculatorScreenState extends State<CalculatorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('BMI Calculator',style: GoogleFonts.urbanist(color: Colors.black,fontWeight: FontWeight.bold),),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -217,7 +224,7 @@ class CalculatorScreenState extends State<CalculatorScreen> {
             onTap: () {
               BmiLogic calc =
               BmiLogic(height: height, weight: weight);
-
+    
               Navigator.push(
                 context,
                 MaterialPageRoute(

@@ -1,3 +1,5 @@
+import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/highcarb.dart';
+import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/highprotien.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -32,12 +34,14 @@ class _DietDataState extends State<DietData> {
                 height: 15,
               ),
               ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'High Protein Diet',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage()));
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  HighProtien()));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/stretching.jpg', name: 'Low Carbs Diet',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/stretching.jpg', name: 'High Carbs Diet',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  HighCarbs()));
+              },),
               SizedBox(
                 height: 10,
               ),

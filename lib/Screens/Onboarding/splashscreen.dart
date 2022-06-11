@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:diet4u/Screens/Homescreen/homepage.dart';
 import 'package:diet4u/Screens/Onboarding/welcome1.dart';
+import 'package:diet4u/Widgets/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,7 +27,7 @@ class _splashscreenState extends State<splashscreen> {
   }
 
   changeScreen() {
-    Timer(const Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (builder) {
         return  StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
@@ -44,18 +45,20 @@ class _splashscreenState extends State<splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: rightbutton,
       body: Container(
         decoration: BoxDecoration(
           ),
         
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           
            children:  <Widget>[
-             Text('Diet4U',style: GoogleFonts.satisfy(color: Colors.black,fontWeight: FontWeight.normal,fontSize: 50,letterSpacing: 0,),),
-             SizedBox(height: MediaQuery.of(context).size.height*0.350,),
-           Image.asset('assets/8225.jpg',alignment: Alignment.bottomCenter,)
+            LottieBuilder.asset('assets/splashscreen.json',),
+            SizedBox(height: MediaQuery.of(context).size.height*0.130,),
+             Text('Diet4U',style: GoogleFonts.satisfy(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 50,letterSpacing: 0,),),
+            
+           
              
             //  Text('Diet4U',style: GoogleFonts.pacifico(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 50,letterSpacing: 2,),)
             //  Text('DIET AND FITNESS APP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.normal,fontSize: 18,letterSpacing: 4),)
