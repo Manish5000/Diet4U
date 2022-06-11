@@ -30,31 +30,52 @@ class _LegState extends State<Leg> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/barbellsquats.jpg', name: 'Barbell Squats',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Barbell Squats',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=AmhT-5tRIME&list=PLhnZygL_8ZFSgI6Ve9XIYZFlA_7o1eT-4&index=7',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/legextention.jpg', name: 'Leg Extention',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/running.png', name: 'Leg Extention',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=U2soEproaoo&list=PLhnZygL_8ZFSgI6Ve9XIYZFlA_7o1eT-4&index=6',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/lyinglegcurl.jpg', name: 'Lying Leg Curl',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Lying Leg Curl',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=EAaL_ej2ar8&list=PLhnZygL_8ZFSgI6Ve9XIYZFlA_7o1eT-4&index=4',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/smithsquats.webp', name: 'Smith Machine Squat',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Smith Machine Squat',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=Pg9qB9Zs5QM&list=PLhnZygL_8ZFSgI6Ve9XIYZFlA_7o1eT-4&index=2',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/hacksquats.png', name: 'Hack Squats',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Hack Squats',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=L1yAOjTMOJM&list=PLhnZygL_8ZFSgI6Ve9XIYZFlA_7o1eT-4&index=3',)));
+              },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/legpress.jpg', name: 'Leg Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Leg Press',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=Bf0CVLMNJ70&list=PLhnZygL_8ZFSgI6Ve9XIYZFlA_7o1eT-4&index=5',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/lunges.jpg', name: 'Stepping Lunges',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Stepping Lunges',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=zR_GPd44bcg&list=PLhnZygL_8ZFSgI6Ve9XIYZFlA_7o1eT-4&index=1',)));
+              },),
               
               
             ]),

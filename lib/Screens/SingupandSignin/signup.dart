@@ -1,13 +1,16 @@
+import 'package:diet4u/Screens/Homescreen/homepage.dart';
+import 'package:diet4u/Screens/SingupandSignin/login.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/textfield.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 class Signupwithmail extends StatefulWidget {
-  const Signupwithmail({ Key? key }) : super(key: key);
+
 
   @override
   State<Signupwithmail> createState() => _SignupwithmailState();
@@ -15,9 +18,12 @@ class Signupwithmail extends StatefulWidget {
 
 class _SignupwithmailState extends State<Signupwithmail> {
   final _formKey = GlobalKey<FormState>();
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   //editing controller
-  final Emailcontroller = TextEditingController();
-  final Passwordcontroller = TextEditingController();
+
+  //editing controller
+  final emailcontroller = TextEditingController();
+  final passwordcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,9 +48,9 @@ class _SignupwithmailState extends State<Signupwithmail> {
               Textfield(text: 'Email', 
               prefixicon: Icons.mail,
               isPassword: false,
-              controllerr: Emailcontroller,
+              controllerr: emailcontroller,
               onsaved: (value){
-                Emailcontroller.text = value!;
+                emailcontroller.text = value!;
               },
               validatorr: (value){
                 if (value!.isEmpty) {
@@ -61,9 +67,9 @@ class _SignupwithmailState extends State<Signupwithmail> {
               prefixicon: Icons.mail,suffixicon: Icon(Icons.remove_red_eye),
               isPassword: true,
               Obscuretext: false,
-              controllerr: Passwordcontroller,
+              controllerr: passwordcontroller,
               onsaved: (value){
-                Passwordcontroller.text = value!;
+                passwordcontroller.text = value!;
               },
               validatorr: (value){
                 RegExp regex= RegExp(r'^.{6,}$');
@@ -77,7 +83,14 @@ class _SignupwithmailState extends State<Signupwithmail> {
               },
               ),
               SizedBox(height: MediaQuery.of(context).size.height*0.035,),  
-               Button1(name: 'Signup', color1: rightbutton, func: (){}),
+               Button1(name: 'Signup', color1: rightbutton, func: (){
+                 if(_formKey.currentState!.validate())
+  {
+ 
+          signup(emailcontroller.text, passwordcontroller.text);
+              
+  }
+               }),
                SizedBox(height: MediaQuery.of(context).size.height*0.070,), 
                 Row(mainAxisAlignment: MainAxisAlignment.center,
               
@@ -127,6 +140,15 @@ class _SignupwithmailState extends State<Signupwithmail> {
       ),
       
     );
+  }
+  void signup(String email, String password) async{
+    await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password).then((uid) =>{
+
+    Fluttertoast.showToast(msg: ""),
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Loginwithmail())),
+    }).catchError((e){
+      Fluttertoast.showToast(msg:e!.message); 
+    });
   }
 
 

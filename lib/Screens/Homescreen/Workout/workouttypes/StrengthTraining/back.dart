@@ -30,34 +30,51 @@ class _BackState extends State<Back> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/chinups.jpg', name: 'Chin-Ups',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: '',)));
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Chin-Ups',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=kQEZeQ4kvJ0&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=7',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              
-              ReuseableCard(assetimage: 'assets/latswidegrip.jpg', name: 'Lat Pull Down\nWide Grip',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/running.png', name: 'Lat Pull Down',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=_KRqs-aHWrU&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=6',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/bentover.jpg', name: 'Bent Over',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Lat Pull Down\nWide Grip',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=IFTu2Okmsnc&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=4',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/latsvgrip.jpg', name: 'Lat Pull Down\nV-Grip',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Bent Over',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=oErJh9hUEGs&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=8',)));
+              },),
+              SizedBox(
+                height: 10,
+              ),
+              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Lat Pull Down\nV-Grip',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=KauYTbN3AVw&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=5',)));
+              },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/latsreversegrip.jpg', name: 'Lat Pull Down\nReverse Grip',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Lat Pull Down\nReverse Grip',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=4vC253pBR4A&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=3',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/rowingdumbbell.jpg', name: 'Rowing Dumbbell',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Rowing Dumbbell',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=7EbAWsYinRs&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=2',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/rowingclosegrip.jpg', name: 'Rowing Close Grip',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Rowing Close Grip',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=3eO8Bsh1yGY&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=1',)));
+              },),
               
             ]),
           ),

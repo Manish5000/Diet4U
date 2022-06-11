@@ -32,25 +32,11 @@ class _StretchingState extends State<Stretching> {
                 height: 15,
               ),
               ReuseableCard(assetimage: 'assets/stretching2.jpg', name: 'Overall Stretching',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage()));
-              },),
-              // SizedBox(
-              //   height: 10,
-              // ),
-              // ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Jumping Rope',ontap: (){},),
-              // SizedBox(
-              //   height: 10,
-              // ),
-              // ReuseableCard(assetimage: 'assets/cycling.png', name: 'Cycling',ontap: (){},),
-              // SizedBox(
-              //   height: 10,
-              // ),
-              // ReuseableCard(assetimage: 'assets/swimming.png', name: 'Swimming',ontap: (){},),
-              //  SizedBox(
-              //   height: 10,
-              // ),
-              // ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Sprinting',ontap: (){},),
-            ]),
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=dg27goOdGFE&list=PLhnZygL_8ZFTMsPg-QRal6LkYBrzP850a',)));
+              },
+              ),
+  ]),
           ),
         ),
       ),
