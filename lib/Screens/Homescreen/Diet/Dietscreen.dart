@@ -1,5 +1,8 @@
 import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/diettypes.dart';
 import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/diettypes.dart';
+import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/highcarb.dart';
+import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/highprotien.dart';
+import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/lowfat.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/workoutcard.dart';
@@ -20,7 +23,7 @@ class _DietpageState extends State<Dietpage> {
     return Scaffold(
       body:
       Padding(
-        padding: const EdgeInsets.only(left:20.0,),
+        padding: const EdgeInsets.only(left:20.0,right: 20),
         child: Column(
           
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +37,7 @@ class _DietpageState extends State<Dietpage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('Featured Diet',style: GoogleFonts.urbanist(fontSize: 17,color: Colors.black,fontWeight: FontWeight.bold)),
+                    Text('Popular Diet',style: GoogleFonts.urbanist(fontSize: 17,color: Colors.black,fontWeight: FontWeight.bold)),
                     TextButton(onPressed: (){
                       Navigator.push(context,MaterialPageRoute(builder: (context) =>  DietData()));
                     },
@@ -43,18 +46,26 @@ class _DietpageState extends State<Dietpage> {
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  height: 270,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Workoutcard(text: 'High Protien',image: AssetImage('assets/protiendiet.jpg'),func: (){},),
-                      SizedBox(width: 15,),
-                      Workoutcard(text: 'Low Carbohydrate',image: AssetImage('assets/lowcarbsdiet.jpg'),func: (){},),
-                      SizedBox(width: 15,),
-                      Workoutcard(text: 'Low Fat',image: AssetImage('assets/lowfatdiet.jpg'),func: (){},),
-                      
-                    ],
+                Expanded(
+                  child: Container(
+                    height: MediaQuery.of(context).size.height,
+                    child: ListView(
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        Workoutcard(text: 'High Protien',image: AssetImage('assets/protiendiet.jpg'),func: (){
+                           Navigator.push(context,MaterialPageRoute(builder: (context) =>  HighProtien()));
+                        },),
+                        SizedBox(width: 15,),
+                        Workoutcard(text: 'High Carbohydrate',image: AssetImage('assets/lowcarbsdiet.jpg'),func: (){
+                           Navigator.push(context,MaterialPageRoute(builder: (context) =>  HighCarbs()));
+                        },),
+                        SizedBox(width: 15,),
+                        Workoutcard(text: 'Low Fat',image: AssetImage('assets/lowfatdiet.jpg'),func: (){
+                           Navigator.push(context,MaterialPageRoute(builder: (context) =>  LowFat()));
+                        },),
+                        
+                      ],
+                    ),
                   ),
                 )
           ],

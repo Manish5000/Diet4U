@@ -1,3 +1,5 @@
+import 'package:diet4u/Screens/Homescreen/description.dart';
+import 'package:diet4u/Widgets/dietdescription.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -31,7 +33,10 @@ class _HighProtienState extends State<HighProtien> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'Eggs',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'Eggs',ontap: (){
+                 Navigator.push(context,MaterialPageRoute(builder: (context) => 
+                Dietdescription(description: Eggs, image: AssetImage('assets/sprinting.png'),title: 'Eggs',)));
+              },),
               SizedBox(
                 height: 10,
               ),

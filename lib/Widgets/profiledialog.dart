@@ -55,7 +55,7 @@ children: [
           },
           child: Row(
             children: [
-              Icon(FontAwesomeIcons.user,color: Colors.black,size: 17,),
+              Icon(FontAwesomeIcons.calculator,color: Colors.black,size: 17,),
               SizedBox(width: MediaQuery.of(context).size.width*0.050,),
               Text('BMI Calculator',style: GoogleFonts.urbanist(fontSize: 18,color: Colors.black,fontWeight: FontWeight.normal),),
             ],

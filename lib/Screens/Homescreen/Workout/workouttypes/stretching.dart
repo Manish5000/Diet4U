@@ -1,4 +1,4 @@
-import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/description.dart';
+import 'package:diet4u/Screens/Homescreen/description.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';

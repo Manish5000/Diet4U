@@ -2,7 +2,6 @@
 
 import 'package:diet4u/Screens/Accountsetup/profle.dart';
 import 'package:diet4u/Screens/ForgotAndResetPass/smsorEmail.dart';
-import 'package:diet4u/Screens/Homescreen/Workout/homepage2.dart';
 import 'package:diet4u/Screens/Homescreen/homepage.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
@@ -148,7 +147,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
     await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password)
     .then((uid) => {
       Fluttertoast.showToast(msg: "Login successful"),
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Homescreen2())),
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Homescreen())),
     }).catchError((e){
       Fluttertoast.showToast(msg:e!.message); 
     });

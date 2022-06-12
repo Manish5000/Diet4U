@@ -1,5 +1,8 @@
 import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/highcarb.dart';
 import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/highprotien.dart';
+import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/lowfat.dart';
+import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/weightgain.dart';
+import 'package:diet4u/Screens/Homescreen/Diet/Diettypes/weightloss.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -45,15 +48,21 @@ class _DietDataState extends State<DietData> {
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/weight.jpg', name: 'Low Fat Diet',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/weight.jpg', name: 'Low Fat Diet',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  LowFat()));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/yoga.jpg', name: 'Weight Gain Diet',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/yoga.jpg', name: 'Weight Gain Diet',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Weightgain()));
+              },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/strength.jpg', name: 'Weight Loss Diet',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/strength.jpg', name: 'Weight Loss Diet',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Weightloss()));
+              },),
             ]),
           ),
         ),

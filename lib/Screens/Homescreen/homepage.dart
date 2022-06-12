@@ -7,9 +7,11 @@ import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/profiledialog.dart';
 import 'package:diet4u/Widgets/workoutcard.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Homescreen extends StatefulWidget {
@@ -105,7 +107,8 @@ final  user = FirebaseAuth.instance.currentUser;
           containerHeight: 65,
           iconSize: 30,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          curve: Curves.easeOut,
+          curve: Curves.easeInOut,
+          animationDuration: Duration(milliseconds: 700),
           selectedIndex: _currentIndex,
           onItemSelected: (index) {
             setState(() => _currentIndex = index);
@@ -113,14 +116,14 @@ final  user = FirebaseAuth.instance.currentUser;
           },
           items: <BottomNavyBarItem>[
             BottomNavyBarItem(
-              title: Text('Workout',style: GoogleFonts.urbanist(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold)),
-              icon: Icon(Icons.home,color: Colors.white,),
+              title: Text('    Workout',style: GoogleFonts.urbanist(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold)),
+              icon: Icon(FontAwesomeIcons.dumbbell,size: 25,color: Colors.white,),
               activeColor: Colors.black,
               
             ),
             BottomNavyBarItem(
-              title: Text('Diet',style: GoogleFonts.urbanist(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold)),
-              icon: Icon(Icons.apps,color: Colors.white,),
+              title: Text('    Diet',style: GoogleFonts.urbanist(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold)),
+              icon: Icon(FontAwesomeIcons.utensils,size: 25,color: Colors.white,),
               activeColor: Colors.black,
               
             ),
