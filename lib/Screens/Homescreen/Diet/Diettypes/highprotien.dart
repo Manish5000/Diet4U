@@ -41,40 +41,58 @@ class _HighProtienState extends State<HighProtien> {
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/running.png', name: 'Almonds',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage()));
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(
+                  title: 'Almonds',image: AssetImage('assets/protiendiet.jpg'),description: Almonds,
+                )));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Chicken Breast',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Chicken Breast',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Dietdescription(description: Chickenbreast, image: AssetImage('assets/protiendiet.jpg'), title: 'Chicken Breast')));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Paneer',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Paneer',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Dietdescription(description: Paneer, image: AssetImage('assets/protiendiet.jpg'), title: 'Paneer')));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Cottage Cheese',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Cottage Cheese',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Dietdescription(description: Cottagecheese, image:AssetImage('assets/protiendiet.jpg'), title: 'Cottage Cheese')));
+              },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Milk',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Milk',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Dietdescription(description: Milk, image: AssetImage('assets/protiendiet.jpg'), title: 'Milk')));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Lean beef',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Lean beef',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Dietdescription(description: Leanbeef, image: AssetImage('assets/protiendiet.jpg'), title: 'Lean Beef')));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Fish ',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Fish ',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Dietdescription(description: Fish, image: AssetImage('assets/protiendiet.jpg'), title: 'Fish')));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Pumpkin seeds',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Pumpkin seeds',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Dietdescription(description: Pumpkinseeds, image: AssetImage('assets/protiendiet.jpg'), title: 'Pumpkin Seeds')));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Peanuts and\n peanut butter',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Peanuts and\n peanut butter',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Dietdescription(description: Peanutandpeanutbutter, image: AssetImage('assets/protiendiet.jpg'), title: 'Peanuts and Peanut Butter')));
+              },),
               
             ]),
           ),

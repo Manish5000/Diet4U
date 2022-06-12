@@ -16,7 +16,7 @@ class _DietdescriptionState extends State<Dietdescription> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: leftButton,
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
@@ -45,12 +45,13 @@ class _DietdescriptionState extends State<Dietdescription> {
             Container(
               decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: leftButton
+                      color: Colors.white
                     ),
               child: Padding(
                 padding: const EdgeInsets.all(20),
                 child: Text(widget.description!,textAlign: TextAlign.center, style: GoogleFonts.urbanist(color: Colors.black,fontSize: 16,)),
               )),
+
     
           ],
         ),
