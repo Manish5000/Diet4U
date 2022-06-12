@@ -141,7 +141,7 @@ class _SignupwithmailState extends State<Signupwithmail> {
       
     );
   }
-  void signup(String email, String password) async{
+  Future signup(String email, String password) async{
     await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password).then((uid) =>{
 
     Fluttertoast.showToast(msg: ""),

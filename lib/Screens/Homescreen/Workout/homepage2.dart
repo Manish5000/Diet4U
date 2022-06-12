@@ -2,6 +2,8 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:diet4u/Screens/Homescreen/Diet/Dietscreen.dart';
+import 'package:diet4u/Screens/Homescreen/Diet/dietscreen2.dart';
+import 'package:diet4u/Screens/Homescreen/Workout/workout2.dart';
 import 'package:diet4u/Screens/Homescreen/Workout/workoutscreen.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
@@ -12,16 +14,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Homescreen extends StatefulWidget {
-  const Homescreen({Key? key}) : super(key: key);
+class Homescreen2 extends StatefulWidget {
+  const Homescreen2({Key? key}) : super(key: key);
 
   
 
   @override
-  State<Homescreen> createState() => _HomescreenState();
+  State<Homescreen2> createState() => _Homescreen2State();
 }
 
-class _HomescreenState extends State<Homescreen> {
+class _Homescreen2State extends State<Homescreen2> {
   int _currentIndex = 0;
   PageController? _pageController;
 final  user = FirebaseAuth.instance.currentUser;
@@ -74,7 +76,7 @@ final  user = FirebaseAuth.instance.currentUser;
                children: [
                  CircleAvatar(
                         
-                   backgroundImage: NetworkImage(user!.photoURL.toString()),
+                  backgroundColor: Colors.white,
                    radius: 20,
                  ),
                ],
@@ -90,8 +92,8 @@ final  user = FirebaseAuth.instance.currentUser;
             setState(() => _currentIndex = index);
           },
           children: <Widget>[
-            Workoutpage(),
-            Dietpage(),
+            Workoutpage2(),
+            Dietpage2(),
             
           ],
         ),

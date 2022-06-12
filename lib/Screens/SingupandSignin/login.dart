@@ -2,6 +2,7 @@
 
 import 'package:diet4u/Screens/Accountsetup/profle.dart';
 import 'package:diet4u/Screens/ForgotAndResetPass/smsorEmail.dart';
+import 'package:diet4u/Screens/Homescreen/Workout/homepage2.dart';
 import 'package:diet4u/Screens/Homescreen/homepage.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
@@ -13,8 +14,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 class Loginwithmail extends StatefulWidget {
-  const Loginwithmail({ Key? key }) : super(key: key);
-
+  const Loginwithmail({ Key? key ,this.ismail}) : super(key: key);
+final bool? ismail ;
   @override
   State<Loginwithmail> createState() => _LoginwithmailState();
 }
@@ -25,6 +26,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
   //editing controller
   final emailcontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
+  bool ismaillogin = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +73,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
             TextFormField(
             decoration: InputDecoration(
               hintText: 'Password',
-             prefixIcon: Icon(Icons.mail)
+             prefixIcon: Icon(Icons.key_sharp),
           
             ),
             controller: passwordcontroller,
@@ -81,12 +83,12 @@ class _LoginwithmailState extends State<Loginwithmail> {
                  validator: (value){
                 RegExp regex= RegExp(r'^.{6,}$');
                 if (value!.isEmpty) {
-                  return('Please is required for login');
+                  return('Password is required for login');
                 }
                 if (!regex.hasMatch(value)) {
-                  return("Password enter valid Password(Min. 6 Character");
+                  return("Please enter valid Password(Min. 6 Character");
                 }
-                return null!;
+                return null;
               },
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.035,),
@@ -98,7 +100,11 @@ class _LoginwithmailState extends State<Loginwithmail> {
  
           
               signIn(emailcontroller.text, passwordcontroller.text);
-  }}),
+  }
+  setState(() {
+    ismaillogin == true;
+  });
+  }),
             SizedBox(height: MediaQuery.of(context).size.height*0.025,),
             GestureDetector(onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: ((context) => SMSorEmail())));
@@ -142,7 +148,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
     await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password)
     .then((uid) => {
       Fluttertoast.showToast(msg: "Login successful"),
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Homescreen())),
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Homescreen2())),
     }).catchError((e){
       Fluttertoast.showToast(msg:e!.message); 
     });

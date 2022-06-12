@@ -6,14 +6,14 @@ import 'package:diet4u/Widgets/workoutcard.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-class Dietpage extends StatefulWidget {
-  const Dietpage({ Key? key }) : super(key: key);
+class Dietpage2 extends StatefulWidget {
+  const Dietpage2({ Key? key }) : super(key: key);
 
   @override
-  State<Dietpage> createState() => _DietpageState();
+  State<Dietpage2> createState() => _Dietpage2State();
 }
 
-class _DietpageState extends State<Dietpage> {
+class _Dietpage2State extends State<Dietpage2> {
    final user = FirebaseAuth.instance.currentUser;
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _DietpageState extends State<Dietpage> {
           children: [
             Padding(
                   padding: const EdgeInsets.only(top: 30),
-                  child: Heading2(text: 'Hello '+  user!.displayName.toString()),
+                  child: Heading2(text: 'Hello '),
                   
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
