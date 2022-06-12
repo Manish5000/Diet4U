@@ -1,9 +1,10 @@
+import 'package:diet4u/Widgets/constant.dart';
 import 'package:flutter/material.dart';
 
 const kBottomContainerHeight = 80.0;
 
 const kActiveCardColour = Color(0xFF7552FF);
-const kInactiveCardColour = Color.fromARGB(255, 60, 41, 139);
+const kInactiveCardColour = Color(0xFFb2bfd4);
 const kBottomContainerColour = Color(0xFFEB1555);
 
 const kLabelTextStyle = TextStyle(

@@ -1,5 +1,6 @@
 import 'package:diet4u/bmi/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class IconContent extends StatelessWidget {
@@ -14,7 +15,9 @@ class IconContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Icon(
+          
           icon,
+          color: Colors.white,
           size: 80.0,
         ),
         SizedBox(
@@ -22,7 +25,7 @@ class IconContent extends StatelessWidget {
         ),
         Text(
           label!,
-          style: kLabelTextStyle,
+          style: GoogleFonts.urbanist(fontSize: 16,fontWeight: FontWeight.bold),
         )
       ],
     );

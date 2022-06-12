@@ -18,11 +18,11 @@ class _RoundIconButtonState extends State<RoundIconButton> {
       child: Icon(widget.icon),
       onPressed: widget.onPressed!,
       constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0,
+        width: 45.0,
+        height: 45.0,
       ),
       shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
+      fillColor: Color(0xFFb2bfd4),
     );
   }
 }

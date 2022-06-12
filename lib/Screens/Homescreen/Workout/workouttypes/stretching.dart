@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/description.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -33,7 +34,10 @@ class _StretchingState extends State<Stretching> {
               ),
               ReuseableCard(assetimage: 'assets/stretching2.jpg', name: 'Overall Stretching',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=dg27goOdGFE&list=PLhnZygL_8ZFTMsPg-QRal6LkYBrzP850a',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=dg27goOdGFE&list=PLhnZygL_8ZFTMsPg-QRal6LkYBrzP850a',
+                 heading: 'Stretching',
+                 description: Stretch, 
+                 )));
               },
               ),
   ]),

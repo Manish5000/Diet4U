@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/description.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -34,7 +35,7 @@ class _ChestState extends State<Chest> {
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
                  Youtubepage(youtubelink: 'https://youtu.be/QZpkHcIx5p8',
                 heading: 'Push-ups',
-                description: "Push-ups are exercises to strengthen your arms and chest muscles. They are done by lying with your face towards the floor and pushing with your hands to raise your body until your arms are straight. Get on the floor on all fours, positioning your hands slightly wider than your shoulders. Don't lock out the elbows; keep them slightly bent. Extend your legs back so you are balanced on your hands and toes, your feet hip-width apart.",
+                description: Pushups,
                  
                  )));
               },),
@@ -43,56 +44,80 @@ class _ChestState extends State<Chest> {
               ),
               ReuseableCard(assetimage: 'assets/benchpress.jpg', name: 'Barbell Bench Press',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=zISjOLBowKE&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=1',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=zISjOLBowKE&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=1',
+                 heading: 'Barbell Bench Press',
+                 description: Benchpress,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/chestdumbbell.jpg', name: 'Dumbbell Press',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=6fPc_2IJCDQ&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=2',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=6fPc_2IJCDQ&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=2',
+                 heading: 'Dumbbell Press',
+                 description: Dumbbellpress,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/inclinedumbbell.jpg', name: 'Inclined Bench Press',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=aXWMb1A8344&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=3',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=aXWMb1A8344&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=3',
+                 heading: 'Inclined Bench Press',
+                 description: Inclinedbenchpress,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/inclinedumbbell.jpg', name: 'Inclined Dumbbell Press',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=i-oub4-O4Bo&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=4',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=i-oub4-O4Bo&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=4',
+                 heading: 'Inclined Dumbbell Press',
+                 description: Inclineddumbbellpress,
+                 )));
               },),
                SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/declinedbench.jpg', name: 'Declined Bench Press',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=JDG9G1RUpjA&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=9',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=JDG9G1RUpjA&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=9',
+                 heading: 'Declined Bench Press',
+                 description: Declinedbenchpress,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/declinedbench.jpg', name: 'Declined Dumbbell Press',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=FNhiddLToeY&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=10',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=FNhiddLToeY&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=10',
+                 heading: 'Declined Dumbbell Press',
+                 description: Declineddumbbellpress,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/fly.jpg', name: 'Machine Fly',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=j9u9NR4lHxI&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=5',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=j9u9NR4lHxI&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=5',
+                 heading: 'Machine Fly',
+                 description: Machinefly,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/fly.jpg', name: 'Cable Cross-over',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) =>
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=OWtD7iOwK2U&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=7',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=OWtD7iOwK2U&list=PLhnZygL_8ZFRfo7Ewg6YFcewB44RD-0vs&index=7',
+                 heading: 'Cable Cross-Oover',
+                 description: Cablecrossover,
+                 )));
               },),
             ]),
           ),

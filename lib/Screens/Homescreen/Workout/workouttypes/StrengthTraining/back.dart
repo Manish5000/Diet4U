@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/description.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -31,49 +32,73 @@ class _BackState extends State<Back> {
                 height: 15,
               ),
               ReuseableCard(assetimage: 'assets/chinups.jpg', name: 'Chin-Ups',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=kQEZeQ4kvJ0&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=7',)));
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=kQEZeQ4kvJ0&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=7',
+                heading: 'Chin-ups',
+                description: Chinups,
+                )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/latsreversegrip.jpg', name: 'Lat Pull Down',ontap: (){
-                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=_KRqs-aHWrU&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=6',)));
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=_KRqs-aHWrU&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=6',
+                 heading: 'Lat Pull Down',
+                 description: Latpulldown,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/latswidegrip.jpg', name: 'Lat Pull Down\nWide Grip',ontap: (){
-                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=IFTu2Okmsnc&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=4',)));
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=IFTu2Okmsnc&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=4',
+                 heading: 'Lat Pull Down Wide Grip',
+                 description: Latpulldownwidegrip,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/bentover.jpg', name: 'Bent Over',ontap: (){
-                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=oErJh9hUEGs&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=8',)));
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=oErJh9hUEGs&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=8',
+                 heading: 'Bent Over',
+                 description: Bentover,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/latsvgrip.jpg', name: 'Lat Pull Down\nV-Grip',ontap: (){
-                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=KauYTbN3AVw&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=5',)));
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=KauYTbN3AVw&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=5',
+                 heading: 'Lat Pull Down V-grip',
+                 description: Latpulldownvgrip,
+                 )));
               },),
                SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/latsreversegrip.jpg', name: 'Lat Pull Down\nReverse Grip',ontap: (){
-                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=4vC253pBR4A&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=3',)));
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=4vC253pBR4A&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=3',
+                 heading: 'Lat Pull Down Reverse Grip',
+                 description: Latpulldownreversegrip,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/rowingdumbbell.jpg', name: 'Rowing Dumbbell',ontap: (){
-                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=7EbAWsYinRs&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=2',)));
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=7EbAWsYinRs&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=2',
+                 heading: 'Rowing Dumbbell',
+                 description: Rowingdumbbell,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/rowingclosegrip.jpg', name: 'Rowing Close Grip',ontap: (){
-                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=3eO8Bsh1yGY&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=1',)));
+                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=3eO8Bsh1yGY&list=PLhnZygL_8ZFTp9EU_X-3fx3DjjTSTOylF&index=1',
+                 heading: 'Rowing Close Grip',
+                 description: Rowingclosegrip,
+                 )));
               },),
               
             ]),

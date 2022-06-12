@@ -21,7 +21,7 @@ class _ReusableCardState extends State<ReusableCard> {
         margin: EdgeInsets.all(15.0),
         decoration: BoxDecoration(
           color: widget.colour,
-          borderRadius: BorderRadius.circular(10.0),
+          borderRadius: BorderRadius.circular(30),
         ),
       ),
     );

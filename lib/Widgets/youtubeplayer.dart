@@ -44,22 +44,23 @@ class _YoutubepageState extends State<Youtubepage> {
           SizedBox(height: 10,),
           Padding(
             padding: const EdgeInsets.all(20),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: leftButton
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Column(
-                  children: [
-                    Text(widget.heading!, style: GoogleFonts.urbanist(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold)),
-                    SizedBox(height: 10,),
-                    Text(widget.description!,textAlign: TextAlign.justify, style: GoogleFonts.urbanist(color: Colors.black,fontSize: 15,)),
-                  ],
-                ),
-                
-              ))
+            child: Column(
+             crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(widget.heading!, style: GoogleFonts.urbanist(color: Colors.black,fontSize: 22,fontWeight: FontWeight.bold)),
+                    SizedBox(height: 20,),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: leftButton
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Text(widget.description!,textAlign: TextAlign.center, style: GoogleFonts.urbanist(color: Colors.black,fontSize: 16,)),
+                    
+                  )),
+              ],
+            )
           ),
         ]),
       ),);

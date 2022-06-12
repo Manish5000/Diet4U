@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Homescreen/Workout/workouttypes/description.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -33,35 +34,50 @@ class _CardioState extends State<Cardio> {
               ),
               ReuseableCard(assetimage: 'assets/running.png', name: 'Jogging',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) => 
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=99GSf7cWaJo',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=99GSf7cWaJo',
+                 heading: 'Jogging',
+                 description: Jogging,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Jumping Rope',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) => 
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=imYy1V9NgBQ',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=imYy1V9NgBQ',
+                 heading: 'Jumping Rope',
+                 description: Jumpingrope,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/cycling.png', name: 'Cycling',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) => 
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=6_aD8nfDoo0',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=6_aD8nfDoo0',
+                 heading: 'Cycling',
+                 description: Cycling,
+                 )));
               },),
               SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/swimming.png', name: 'Swimming',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) => 
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=LijdyVaaDnY',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=LijdyVaaDnY',
+                 heading: 'Swimming',
+                 description: Swimming,
+                 )));
               },),
                SizedBox(
                 height: 10,
               ),
               ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Sprinting',ontap: (){
                  Navigator.push(context,MaterialPageRoute(builder: (context) => 
-                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=-Ot-dP1xST4',)));
+                 Youtubepage(youtubelink: 'https://www.youtube.com/watch?v=-Ot-dP1xST4',
+                 heading: 'Sprinting',
+                 description: Sprinting,
+                 )));
               },),
             ]),
           ),
