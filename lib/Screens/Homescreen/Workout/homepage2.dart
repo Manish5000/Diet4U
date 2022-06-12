@@ -7,6 +7,7 @@ import 'package:diet4u/Screens/Homescreen/Workout/workout2.dart';
 import 'package:diet4u/Screens/Homescreen/Workout/workoutscreen.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/header2.dart';
+import 'package:diet4u/Widgets/profiledailog2.dart';
 import 'package:diet4u/Widgets/profiledialog.dart';
 import 'package:diet4u/Widgets/workoutcard.dart';
 import 'package:flutter/material.dart';
@@ -68,7 +69,7 @@ final  user = FirebaseAuth.instance.currentUser;
          GestureDetector(
            onTap: (){
               showDialog(context: context, builder: (builder){
-                     return  Profiledialog();
+                     return  Profiledialog2();
            });},
            child: Padding(
              padding: EdgeInsets.only(top: 15,right: 15),
@@ -76,7 +77,7 @@ final  user = FirebaseAuth.instance.currentUser;
                children: [
                  CircleAvatar(
                         
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.blue,
                    radius: 20,
                  ),
                ],
