@@ -16,9 +16,9 @@ class _AboutusState extends State<Aboutus> {
       
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,        
+        backgroundColor: Color(0xFF7552FF),        
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF7552FF),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(

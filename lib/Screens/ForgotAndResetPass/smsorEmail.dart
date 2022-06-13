@@ -1,4 +1,4 @@
-import 'package:diet4u/Screens/ForgotAndResetPass/otp.dart';
+import 'package:diet4u/Screens/ForgotAndResetPass/emailresetpage.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:flutter/material.dart';
@@ -35,42 +35,9 @@ class _SMSorEmailState extends State<SMSorEmail> {
         child: Column(
           children: [
             Lottie.asset('assets/forgotpassword.json',height: 250),
-            SizedBox(height: MediaQuery.of(context).size.height*0.050),
-            Text('Select which contact datails should we use to reset \nyour paswword',
-            style: GoogleFonts.urbanist(
-              color: Colors.black),),
-              SizedBox(height: MediaQuery.of(context).size.height*0.010,),
-              GestureDetector(
-                onTap: (){setState(() {
-                  Selectoption = Option.viasms;
-                });},
-                child: Container(
-                  height: MediaQuery.of(context).size.height*0.120,
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    border: Border.all(color: Selectoption == Option.viasms? activecolor: inactivecolor,width: 2),
-            ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: CircleAvatar(
-                          
-                          radius: 30,
-                          backgroundColor: rightbutton,
-                          backgroundImage: AssetImage('assets/sms.jpg',),
-                          ),
-                      ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Via SMS',style: GoogleFonts.urbanist(color: Colors.grey,fontWeight: FontWeight.bold),),
-                            Text('+918094705928',style: GoogleFonts.urbanist(color: Colors.black,fontWeight: FontWeight.bold),)
-                          ],
-                        )
-                    ],
-                  ),),),
+            SizedBox(height: MediaQuery.of(context).size.height*0.080),
+           Text('Select option',style: GoogleFonts.urbanist(color: Colors.black,fontWeight: FontWeight.bold),),
+       SizedBox(height: MediaQuery.of(context).size.height*0.020),
               GestureDetector(
                 onTap: (){
                   setState(() {
@@ -78,9 +45,11 @@ class _SMSorEmailState extends State<SMSorEmail> {
                   });
                 },
                 child: Container(
+                  
                   height: MediaQuery.of(context).size.height*0.120,
                   margin: EdgeInsets.all(10),
                   decoration: BoxDecoration(
+                    
                     borderRadius: BorderRadius.circular(15),
                     border: Border.all(color: Selectoption == Option.viaemail? activecolor : inactivecolor,width: 2,),
               
@@ -99,7 +68,7 @@ class _SMSorEmailState extends State<SMSorEmail> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('Via Email',style: GoogleFonts.urbanist(color: Colors.grey,fontWeight: FontWeight.bold),),
-                            Text('manish@gmail.com',style: GoogleFonts.urbanist(color: Colors.black,fontWeight: FontWeight.bold),)
+                            Text('xxxxxxx@gmail.com',style: GoogleFonts.urbanist(color: Colors.black,fontWeight: FontWeight.bold),)
                           ],
                         )
                     ],

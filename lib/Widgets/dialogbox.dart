@@ -1,5 +1,6 @@
 import 'package:diet4u/Screens/Homescreen/homepage.dart';
 import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
+import 'package:diet4u/Screens/SingupandSignin/login.dart';
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:flutter/material.dart';
@@ -28,10 +29,10 @@ Image.asset('assets/done.jpg',height: 200,),
 
 Text('Congratulations',style: GoogleFonts.urbanist(fontSize: 26,fontWeight: FontWeight.bold,color: rightbutton)),
 SizedBox(height: MediaQuery.of(context).size.height*0.020,),
-Text('Your account ready to use',style: GoogleFonts.urbanist(fontSize: 14,color:Colors.black)),
+Text('Your account will be ready to use after reset ',textAlign: TextAlign.center,style: GoogleFonts.urbanist(fontSize: 14,color:Colors.black)),
 SizedBox(height: MediaQuery.of(context).size.height*0.060,),
-Button1(name: 'Go to Homepage', color1: rightbutton, func: (){
-   Navigator.push(context, MaterialPageRoute(builder: ((context) => Homescreen())));
+Button1(name: 'Go to login page', color1: rightbutton, func: (){
+   Navigator.push(context, MaterialPageRoute(builder: ((context) => Loginwithmail())));
 })
     ]),
   )

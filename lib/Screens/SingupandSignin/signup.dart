@@ -22,8 +22,8 @@ class _SignupwithmailState extends State<Signupwithmail> {
   //editing controller
 
   //editing controller
-  final emailcontroller = TextEditingController();
-  final passwordcontroller = TextEditingController();
+  final TextEditingController? emailcontroller = TextEditingController();
+  final TextEditingController? passwordcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,49 +45,70 @@ class _SignupwithmailState extends State<Signupwithmail> {
                 child: Heading2(text: 'Create your account'),
               ),
               SizedBox(height: MediaQuery.of(context).size.height*0.070,),
-              Textfield(text: 'Email', 
-              prefixicon: Icons.mail,
-              isPassword: false,
-              controllerr: emailcontroller,
-              onsaved: (value){
-                emailcontroller.text = value!;
-              },
-              validatorr: (value){
-                if (value!.isEmpty) {
-                  return("Please Enter Your Email");
-                } 
-                if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
-                  return("Please Enter a valid email ");
+              TextFormField(
+            decoration: InputDecoration(
+              border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: Color(0xFF7552FF))),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide(
+                  
+                  color: Color(0xFF7552FF))),
+              hintText: 'Email',
+             prefixIcon: Icon(Icons.mail)
+          
+            ),
+            controller: emailcontroller,
+                onSaved: (value){
+                  emailcontroller!.text = value!;
+                },
+                validator: (value){
+                  if (value!.isEmpty) {
+                    return('Please enter your email ');
+                  }
+                  if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
+                    return("Please Enter a valid email ");
+                  }
+                  
+                  return null;
                 }
-                return null!;
-              },
-              ),
+            ),
+            
               SizedBox(height:15 ,),
-              Textfield(text: 'Password', 
-              prefixicon: Icons.mail,suffixicon: Icon(Icons.remove_red_eye),
-              isPassword: true,
-              Obscuretext: false,
-              controllerr: passwordcontroller,
-              onsaved: (value){
-                passwordcontroller.text = value!;
-              },
-              validatorr: (value){
+              TextFormField(
+            decoration: InputDecoration(
+              border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: Color(0xFF7552FF))),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide(
+                  
+                  color: Color(0xFF7552FF))),
+              hintText: 'Password',
+             prefixIcon: Icon(Icons.key_sharp),
+          
+            ),
+            controller: passwordcontroller,
+                onSaved: (value){
+                  emailcontroller!.text = value!;
+                },
+                 validator: (value){
                 RegExp regex= RegExp(r'^.{6,}$');
                 if (value!.isEmpty) {
-                  return('Please is required for login');
+                  return('Please enter password');
                 }
                 if (!regex.hasMatch(value)) {
-                  return("Password enter valid Password(Min. 6 Character");
+                  return("Please enter valid Password(Min. 6 Character");
                 }
-                return null!;
+                return null;
               },
-              ),
+            ),
               SizedBox(height: MediaQuery.of(context).size.height*0.035,),  
                Button1(name: 'Signup', color1: rightbutton, func: (){
                  if(_formKey.currentState!.validate())
   {
  
-          signup(emailcontroller.text, passwordcontroller.text);
+          signup(emailcontroller!.text, passwordcontroller!.text);
               
   }
                }),
@@ -144,7 +165,7 @@ class _SignupwithmailState extends State<Signupwithmail> {
   Future signup(String email, String password) async{
     await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password).then((uid) =>{
 
-    Fluttertoast.showToast(msg: ""),
+    
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Loginwithmail())),
     }).catchError((e){
       Fluttertoast.showToast(msg:e!.message); 

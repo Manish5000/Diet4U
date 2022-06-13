@@ -26,65 +26,20 @@ class _CreatepassState extends State<Createpass> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         
-        leading: Icon(Icons.arrow_back,color: Colors.black,),
-        title: Text('Forgot Password',style: GoogleFonts.urbanist(color: Colors.black,fontWeight: FontWeight.bold),),
+        title: Text('Link sent sucessfully',style: GoogleFonts.urbanist(color: Colors.black,fontWeight: FontWeight.bold),),
         backgroundColor: Colors.white,
         elevation: 0,
       ),   
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Lottie.asset('assets/createpass.json'),
-            Text('Create Your New Password',style: GoogleFonts.urbanist(color: Colors.black,),),
+            SizedBox(height: MediaQuery.of(context).size.height*0.020,),
+            Text('Kindly check your e-mail for password reset link ',textAlign: TextAlign.center,style: GoogleFonts.urbanist(color: Colors.black,fontSize: 20,fontWeight:FontWeight.bold),),
             SizedBox(height: MediaQuery.of(context).size.height*0.050,),
-            Textfield(
-                
-                text: 'Password',
-              prefixicon: Icons.lock,
-              Obscuretext: true,
-              suffixicon: Icon(Icons.remove_red_eye),
-              keyboardtype: TextInputType.emailAddress,
-              textinputaction: TextInputAction.next,
-              isPassword: false,
-              controllerr: emailcontroller,
-                  onsaved: (value){
-                    emailcontroller.text = value!;
-                  },
-                  validatorr: (value){
-                    if (value!.isEmpty) {
-                      return('Create Password');
-                    }
-                    if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
-                      return("Please create a new password");
-                    }
-                    // ignore: null_check_always_fails
-                    return null!;
-                  },),
-                  SizedBox(height: 15,),
-                   Textfield(
-              textinputaction: TextInputAction.done,
-              text: 'Password',
-              prefixicon: Icons.lock,
-              suffixicon: Icon(Icons.remove_red_eye),
-              Obscuretext: true,
-              isPassword: true,
-              controllerr: passwordcontroller,
-                onsaved: (value){
-                  passwordcontroller.text = value!;
-                },
-                validatorr: (value){
-                  RegExp regex= RegExp(r'^.{6,}$');
-                  if (value!.isEmpty) {
-                    return('Confrm Password');
-                  }
-                  if (!regex.hasMatch(value)) {
-                    return("Enter password again");
-                  }
-                  // ignore: null_check_always_fails
-                  return null!;
-                },),
+           
                 Spacer(),
                 Button1(name: 'Continue', color1: rightbutton, func: (){
                  showDialog(context: context, builder: (builder){

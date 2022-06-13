@@ -48,6 +48,13 @@ class _LoginwithmailState extends State<Loginwithmail> {
             SizedBox(height: MediaQuery.of(context).size.height*0.07,),
             TextFormField(
             decoration: InputDecoration(
+              border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: Color(0xFF7552FF))),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide(
+                  
+                  color: Color(0xFF7552FF))),
               hintText: 'Email',
              prefixIcon: Icon(Icons.mail)
           
@@ -63,7 +70,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
                   if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) {
                     return("Please Enter a valid email ");
                   }
-                  // ignore: null_check_always_fails
+                  
                   return null;
                 }
             ),
@@ -71,6 +78,13 @@ class _LoginwithmailState extends State<Loginwithmail> {
             SizedBox(height: 15),
             TextFormField(
             decoration: InputDecoration(
+              border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: Color(0xFF7552FF))),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide(
+                  
+                  color: Color(0xFF7552FF))),
               hintText: 'Password',
              prefixIcon: Icon(Icons.key_sharp),
           
@@ -100,9 +114,7 @@ class _LoginwithmailState extends State<Loginwithmail> {
           
               signIn(emailcontroller.text, passwordcontroller.text);
   }
-  setState(() {
-    ismaillogin == true;
-  });
+  
   }),
             SizedBox(height: MediaQuery.of(context).size.height*0.025,),
             GestureDetector(onTap: (){
