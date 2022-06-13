@@ -54,12 +54,7 @@ class _AboutusState extends State<Aboutus> {
                   children: [
                     Text('Developers',textAlign: TextAlign.center, style: GoogleFonts.urbanist(color: Colors.black,fontSize: 18,fontWeight: FontWeight.normal)),
                     SizedBox(height: 20,),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Manish Parihar\nMD Shahjada',textAlign: TextAlign.start, style: GoogleFonts.urbanist(color: Colors.black,fontSize: 16,fontWeight: FontWeight.bold)),
-                      ],
-                    ),
+                    Text('Manish Parihar\nMD Shahjada',textAlign: TextAlign.start, style: GoogleFonts.urbanist(color: Colors.black,fontSize: 16,fontWeight: FontWeight.bold)),
                     
                   ],
                 ),

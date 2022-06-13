@@ -1,5 +1,7 @@
 import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
 import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
+import 'package:diet4u/Screens/aboutus.dart';
+import 'package:diet4u/Screens/contactus.dart';
 import 'package:diet4u/bmi/screens/calculator_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -61,20 +63,11 @@ children: [
             ],
           ),
         ),
-        SizedBox(height: MediaQuery.of(context).size.height*0.040,),
+        SizedBox(height: MediaQuery.of(context).size.height*0.040,),        
         GestureDetector(
-          onTap: (){},
-          child: Row(
-            children: [
-              Icon(FontAwesomeIcons.gear,color: Colors.black,size: 17,),
-              SizedBox(width: MediaQuery.of(context).size.width*0.050,),
-              Text('Settings',style: GoogleFonts.urbanist(fontSize: 18,color: Colors.black,fontWeight: FontWeight.normal),),
-            ],
-          ),
-        ),
-        SizedBox(height: MediaQuery.of(context).size.height*0.040,),
-        GestureDetector(
-          onTap: (){},
+          onTap: (){
+             Navigator.push(context,MaterialPageRoute(builder: (context) =>  Aboutus()));
+          },
           child: Row(
             children: [
               Icon(FontAwesomeIcons.users,color: Colors.black,size: 17,),
@@ -83,6 +76,20 @@ children: [
             ],
           ),
         ),
+        SizedBox(height: MediaQuery.of(context).size.height*0.040,),        
+        GestureDetector(
+          onTap: (){
+             Navigator.push(context,MaterialPageRoute(builder: (context) =>  Contactus()));
+          },
+          child: Row(
+            children: [
+              Icon(FontAwesomeIcons.gear,color: Colors.black,size: 17,),
+              SizedBox(width: MediaQuery.of(context).size.width*0.050,),
+              Text('Contact Us',style: GoogleFonts.urbanist(fontSize: 18,color: Colors.black,fontWeight: FontWeight.normal),),
+            ],
+          ),
+        ),
+        SizedBox(height: MediaQuery.of(context).size.height*0.040,),
         SizedBox(height: MediaQuery.of(context).size.height*0.300,),
 Buttonarea(text: 'Logout', icon: FontAwesomeIcons.arrowRightFromBracket,c: Colors.black,func: (){
   Navigator.pop(context);
