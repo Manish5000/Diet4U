@@ -1,8 +1,10 @@
+import 'package:diet4u/Screens/SingupandSignin/authentication.dart';
 import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
 import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
 import 'package:diet4u/Screens/aboutus.dart';
 import 'package:diet4u/Screens/contactus.dart';
 import 'package:diet4u/bmi/screens/calculator_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,6 +18,7 @@ class Profiledialog extends StatefulWidget {
 }
 
 class _ProfiledialogState extends State<Profiledialog> {
+   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return  AlertDialog(
@@ -94,8 +97,8 @@ children: [
 Buttonarea(text: 'Logout', icon: FontAwesomeIcons.arrowRightFromBracket,c: Colors.black,func: (){
   Navigator.pop(context);
   final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
-  provider.logout();
- 
+  provider.logout().then((value) => Navigator.push(context, MaterialPageRoute(builder: ((context) => Authentication()))));
+  _firebaseAuth.signOut().then((value) => Navigator.push(context, MaterialPageRoute(builder: ((context) => Authentication()))));
   
 },)
       ],

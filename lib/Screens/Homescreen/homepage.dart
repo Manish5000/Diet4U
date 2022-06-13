@@ -4,6 +4,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:diet4u/Screens/Homescreen/Diet/Dietscreen.dart';
 import 'package:diet4u/Screens/Homescreen/Workout/workoutscreen.dart';
 import 'package:diet4u/Widgets/constant.dart';
+import 'package:diet4u/Widgets/emailprofiledailog.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/profiledialog.dart';
 import 'package:diet4u/Widgets/workoutcard.dart';
