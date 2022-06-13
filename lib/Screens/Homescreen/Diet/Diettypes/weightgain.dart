@@ -1,3 +1,5 @@
+import 'package:diet4u/Screens/Homescreen/description.dart';
+import 'package:diet4u/Widgets/dietdescription.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -31,45 +33,63 @@ class _WeightgainState extends State<Weightgain> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'Homemade protein\nsmoothies',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Milk',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage()));
+              ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'Homemade protein\nsmoothies',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Homemadesmoothies,image: AssetImage('assets/protiendiet.jpg'),title: 'Homemade Protein Smoothies',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Rice',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/running.png', name: 'Milk',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Milk,image: AssetImage('assets/protiendiet.jpg'),title: 'Milk',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Nuts and nut butters',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Rice',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Rice,image: AssetImage('assets/protiendiet.jpg'),title: 'Rice',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Red meats',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Nuts and nut butters',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Nutsandnutbutters,image: AssetImage('assets/protiendiet.jpg'),title: 'Nuts and Nut Butters',)));
+              },),
+              SizedBox(
+                height: 10,
+              ),
+              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Red meats',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Redmeats,image: AssetImage('assets/protiendiet.jpg'),title: 'Red Meats',)));
+              },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Potatoes and starches',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Potatoes and starches',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Potatoesandstarches,image: AssetImage('assets/protiendiet.jpg'),title: 'Potatoes and Starches',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Salmon and oily fish',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Salmon and oily fish',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Salmonandoilyfish,image: AssetImage('assets/protiendiet.jpg'),title: 'Salmon and Oily Fish',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Dried fruit',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Dried fruit',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Driedfruits,image: AssetImage('assets/protiendiet.jpg'),title: 'Dried Fruits',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Whole grain bread',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Whole grain bread',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Wholegrainbread,image: AssetImage('assets/protiendiet.jpg'),title: 'Whole Grain Bread',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Avocados',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Avocados',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Avacados,image: AssetImage('assets/protiendiet.jpg'),title: 'Avocados',)));
+              },),
               
             ]),
           ),

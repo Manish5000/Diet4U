@@ -51,7 +51,7 @@ class _DietdescriptionState extends State<Dietdescription> {
                 padding: const EdgeInsets.all(20),
                 child: Text(widget.description!,textAlign: TextAlign.center, style: GoogleFonts.urbanist(color: Colors.black,fontSize: 16,)),
               )),
-
+    
     
           ],
         ),

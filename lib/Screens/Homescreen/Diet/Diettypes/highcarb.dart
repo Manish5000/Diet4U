@@ -1,3 +1,5 @@
+import 'package:diet4u/Screens/Homescreen/description.dart';
+import 'package:diet4u/Widgets/dietdescription.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -31,45 +33,63 @@ class _HighCarbsState extends State<HighCarbs> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'Oats',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Buckwheat',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage()));
+              ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'Oats',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Oats,image: AssetImage('assets/sprinting.png'),title: 'Oats',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Bananas',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/running.png', name: 'Buckwheat',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Buckwheats,image: AssetImage('assets/sprinting.png'),title: 'Buckwheat',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Sweet potatoes',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Bananas',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Bananas,image: AssetImage('assets/sprinting.png'),title: 'Bananas',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Beets',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Sweet potatoes',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Sweetpotatoes,image: AssetImage('assets/sprinting.png'),title: 'Sweet Potatoes',)));
+              },),
+              SizedBox(
+                height: 10,
+              ),
+              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Beets',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Beets,image: AssetImage('assets/sprinting.png'),title: 'Beets',)));
+              },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Oranges',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Oranges',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Oranges,image: AssetImage('assets/sprinting.png'),title: 'Oranges',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Blueberries',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Blueberries',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Blueberries,image: AssetImage('assets/sprinting.png'),title: 'Blueberries',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Apples',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Apples',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Apples,image: AssetImage('assets/sprinting.png'),title: 'Apples',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Kidney Beans',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Kidney Beans',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Kidneybeans,image: AssetImage('assets/sprinting.png'),title: 'Kidney Beans',)));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Peanuts and\n peanut butter',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Peanuts and\n peanut butter',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Peanutandpeanutbutter,image: AssetImage('assets/sprinting.png'),title: 'Peanuts and Peanut Butter',)));
+              },),
               
             ]),
           ),

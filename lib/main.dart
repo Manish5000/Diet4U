@@ -1,5 +1,6 @@
 import 'dart:collection';
 import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
+import 'package:diet4u/Screens/aboutus.dart';
 import 'package:diet4u/bmi/screens/calculator_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:diet4u/Screens/Accountsetup/activitylevel.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: splashscreen(),
+      home: Aboutus(),
     ),
     
   );
