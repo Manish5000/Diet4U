@@ -9,7 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FillProfile extends StatefulWidget {
-  const FillProfile({ Key? key }) : super(key: key);
+  
+    TextEditingController? namee = TextEditingController();
+   
 
   @override
   State<FillProfile> createState() => _FillProfileState();
@@ -17,6 +19,7 @@ class FillProfile extends StatefulWidget {
 
 class _FillProfileState extends State<FillProfile> {
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -46,7 +49,10 @@ class _FillProfileState extends State<FillProfile> {
                 ),
             ),
             SizedBox(height: 20,),
-            Textfield(text: 'Full Name',isPassword: false,),
+            Textfield(
+            
+              text:'Name',isPassword: false,),
+            
             SizedBox(height: 15,),
             Textfield(text: 'Nickname',isPassword: false,),
             SizedBox(height: 15,),
@@ -55,7 +61,7 @@ class _FillProfileState extends State<FillProfile> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Button2(name: 'Skip', buttoncolor: leftButton, func: (){}, textcolor: leftButtontext),
+                Button2(name: 'Skip', buttoncolor: leftButton, func: (){Navigator.of(context).pop();}, textcolor: leftButtontext),
                 SizedBox(width: 20,),
                 Button2(name: 'Start', buttoncolor: rightbutton, func: (){
                   Navigator.push(context,MaterialPageRoute(builder: (context) =>  Authentication()));
@@ -65,4 +71,5 @@ class _FillProfileState extends State<FillProfile> {
       
           ])));
   }
+  
 }

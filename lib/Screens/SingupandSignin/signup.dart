@@ -24,6 +24,7 @@ class _SignupwithmailState extends State<Signupwithmail> {
   //editing controller
   final TextEditingController? emailcontroller = TextEditingController();
   final TextEditingController? passwordcontroller = TextEditingController();
+  bool obscuretext = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,11 +47,12 @@ class _SignupwithmailState extends State<Signupwithmail> {
               ),
               SizedBox(height: MediaQuery.of(context).size.height*0.070,),
               TextFormField(
-            decoration: InputDecoration(
+
+            decoration: InputDecoration(isDense: true,
               border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: Color(0xFF7552FF))),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
                   
                   color: Color(0xFF7552FF))),
@@ -76,16 +78,27 @@ class _SignupwithmailState extends State<Signupwithmail> {
             
               SizedBox(height:15 ,),
               TextFormField(
+                obscureText:obscuretext ,
             decoration: InputDecoration(
+              isDense: true,
               border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: Color(0xFF7552FF))),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
                   
                   color: Color(0xFF7552FF))),
               hintText: 'Password',
              prefixIcon: Icon(Icons.key_sharp),
+             suffixIcon: IconButton(
+                   icon: Icon(Icons.hide_source),
+                   onPressed: (){
+                      setState(() {
+                            obscuretext=!obscuretext;
+                 
+                      });
+                   },
+                    ),
           
             ),
             controller: passwordcontroller,

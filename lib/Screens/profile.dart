@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Accountsetup/profle.dart';
 import 'package:diet4u/Screens/SingupandSignin/authentication.dart';
 import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
 import 'package:diet4u/Widgets/button1.dart';
@@ -9,7 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Profile extends StatefulWidget {
-  const Profile({ Key? key }) : super(key: key);
+ 
+   Profile({ Key? key, }) : super(key: key);
 
   @override
   State<Profile> createState() => _ProfileState();
@@ -55,7 +57,7 @@ class _ProfileState extends State<Profile> {
               ),
               child: Padding(
                 padding: const EdgeInsets.all(13),
-                child: Text('Full Name',style: GoogleFonts.urbanist(fontSize: 16),),
+                child: Text('text',style: GoogleFonts.urbanist(fontSize: 16),),
               )),
             SizedBox(height: 20,),
            Container(
@@ -91,7 +93,7 @@ class _ProfileState extends State<Profile> {
               ),
               child: Padding(
                 padding: const EdgeInsets.all(13),
-                child: Text('Your Age',style: GoogleFonts.urbanist(fontSize: 16),),
+                child: Text('name'),
               )),
             Spacer(),
             Row(

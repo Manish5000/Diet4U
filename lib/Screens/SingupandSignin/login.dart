@@ -25,7 +25,8 @@ class _LoginwithmailState extends State<Loginwithmail> {
   //editing controller
   final emailcontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
-  bool ismaillogin = false;
+
+  bool obscuretext = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,10 +49,11 @@ class _LoginwithmailState extends State<Loginwithmail> {
             SizedBox(height: MediaQuery.of(context).size.height*0.07,),
             TextFormField(
             decoration: InputDecoration(
+              isDense: true,
               border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: Color(0xFF7552FF))),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
                   
                   color: Color(0xFF7552FF))),
@@ -77,16 +79,28 @@ class _LoginwithmailState extends State<Loginwithmail> {
             
             SizedBox(height: 15),
             TextFormField(
+              
+              obscureText: obscuretext,
             decoration: InputDecoration(
+              isDense: true,
               border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: Color(0xFF7552FF))),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
                   
                   color: Color(0xFF7552FF))),
               hintText: 'Password',
              prefixIcon: Icon(Icons.key_sharp),
+             suffixIcon: IconButton(
+                   icon: Icon(Icons.hide_source),
+                   onPressed: (){
+                      setState(() {
+                            obscuretext=!obscuretext;
+                 
+                      });
+                   },
+                    ),
           
             ),
             controller: passwordcontroller,
