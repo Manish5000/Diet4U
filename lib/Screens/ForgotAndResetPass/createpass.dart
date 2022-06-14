@@ -1,5 +1,3 @@
-
-
 import 'package:diet4u/Widgets/button1.dart';
 import 'package:diet4u/Widgets/constant.dart';
 import 'package:diet4u/Widgets/dialogbox.dart';

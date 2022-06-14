@@ -22,7 +22,7 @@ class _WorkoutcardState extends State<Workoutcard> {
         child: Container(
           height: 250,
           width: 250,
-          decoration:BoxDecoration(color: Colors.redAccent,
+          decoration:BoxDecoration(
           image: DecorationImage(image: widget.image!,fit: BoxFit.fill),
           borderRadius: BorderRadius.circular(40)) ,
           child: Padding(

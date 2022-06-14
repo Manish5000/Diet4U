@@ -35,7 +35,7 @@ class Contactus extends StatelessWidget {
                     SizedBox(height: MediaQuery.of(context).size.height*0.050,),
                     LottieBuilder.asset('assets/contactus.json'),
                     SizedBox(height: MediaQuery.of(context).size.height*0.050,),
-                    Text('Thank You',style: GoogleFonts.urbanist(color: Colors.black,fontWeight: FontWeight.normal,fontSize: 18),),
+                    Text('Thank You',style: GoogleFonts.urbanist(color: Colors.black45,fontWeight: FontWeight.normal,fontSize: 18),),
                     
                   ],
                 ),

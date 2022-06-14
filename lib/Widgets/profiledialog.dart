@@ -3,6 +3,7 @@ import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
 import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
 import 'package:diet4u/Screens/aboutus.dart';
 import 'package:diet4u/Screens/contactus.dart';
+import 'package:diet4u/Screens/profile.dart';
 import 'package:diet4u/bmi/screens/calculator_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,9 @@ children: [
     child: Column(
       children: [
         GestureDetector(
-          onTap: (){},
+          onTap: (){
+             Navigator.push(context,MaterialPageRoute(builder: (context) =>  Profile()));
+          },
           child: Row(
             children: [
               Icon(FontAwesomeIcons.user,color: Colors.black,size: 17,),

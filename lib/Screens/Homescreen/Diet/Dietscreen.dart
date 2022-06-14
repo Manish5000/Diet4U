@@ -30,8 +30,14 @@ class _DietpageState extends State<Dietpage> {
           children: [
             Padding(
                   padding: const EdgeInsets.only(top: 30),
-                  child: Heading2(text: 'Hello '+  user!.displayName.toString()),
-                  
+                  child: Row(
+                    children: [
+                      Heading2(text: 'Hello, '),
+                       Text(user!.displayName.toString(),
+                        style: GoogleFonts.urbanist(
+                            fontSize: 20, fontWeight: FontWeight.bold))
+                    ],
+                  ),                                   
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
                 Row(
