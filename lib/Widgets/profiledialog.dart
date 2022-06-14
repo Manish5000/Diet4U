@@ -89,7 +89,7 @@ children: [
           },
           child: Row(
             children: [
-              Icon(FontAwesomeIcons.gear,color: Colors.black,size: 17,),
+              Icon(FontAwesomeIcons.contactBook,color: Colors.black,size: 17,),
               SizedBox(width: MediaQuery.of(context).size.width*0.050,),
               Text('Contact Us',style: GoogleFonts.urbanist(fontSize: 18,color: Colors.black,fontWeight: FontWeight.normal),),
             ],

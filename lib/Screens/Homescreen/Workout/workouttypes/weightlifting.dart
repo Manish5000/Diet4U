@@ -1,3 +1,4 @@
+import 'package:diet4u/Screens/Homescreen/description.dart';
 import 'package:diet4u/Widgets/header2.dart';
 import 'package:diet4u/Widgets/resuablecard.dart';
 import 'package:diet4u/Widgets/youtubeplayer.dart';
@@ -31,21 +32,35 @@ class _WeightliftingState extends State<Weightlifting> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/deadlift.jpg', name: 'Conventional Deadlift',ontap: (){},),
-              SizedBox(
-                height: 10,
-              ),
-              ReuseableCard(assetimage: 'assets/barbellsquats.jpg', name: 'Squats',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage()));
+              ReuseableCard(assetimage: 'assets/deadlift.jpg', name: 'Conventional Deadlift',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(
+                  youtubelink: 'https://youtu.be/c0EWctpxhZs',description: Conventionaldeadlift,heading: 'Conventional Deadlift',
+                )));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/benchpress.jpg', name: 'Barbell Bench Press',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/barbellsquats.jpg', name: 'Squats',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(
+                  youtubelink: 'https://youtu.be/XV1X4_bEvpo',description: Squats,heading: 'Squats',
+                )));
+              },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sumodeadlift.jpg', name: 'Sumo Deadlift',ontap: (){},),
+              ReuseableCard(assetimage: 'assets/benchpress.jpg', name: 'Barbell Bench Press',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(
+                  youtubelink: 'https://youtu.be/9l9guSIjnZY',description: Barbellbenchpress,heading: 'Barbell Bench Press',
+                )));
+              },),
+              SizedBox(
+                height: 10,
+              ),
+              ReuseableCard(assetimage: 'assets/sumodeadlift.jpg', name: 'Sumo Deadlift',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Youtubepage(
+                  youtubelink: 'https://youtu.be/wQHSYDSgDn8',description: Sumodeadlift,heading: 'Sumo Deadlift',
+                )));
+              },),
               // SizedBox(
               //   height: 10,
               // ),
