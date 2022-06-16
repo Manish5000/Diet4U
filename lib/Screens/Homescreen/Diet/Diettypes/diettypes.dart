@@ -36,31 +36,31 @@ class _DietDataState extends State<DietData> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'High Protein Diet',ontap: (){
+              ReuseableCard(assetimage: 'assets/protiendiet.jpg', name: 'High Protein Diet',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  HighProtien()));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/stretching.jpg', name: 'High Carbs Diet',ontap: (){
+              ReuseableCard(assetimage: 'assets/lowcarbsdiet.jpg', name: 'High Carbs Diet',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  HighCarbs()));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/weight.jpg', name: 'Low Fat Diet',ontap: (){
+              ReuseableCard(assetimage: 'assets/lowfatdiet.jpg', name: 'Low Fat Diet',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  LowFat()));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/yoga.jpg', name: 'Weight Gain Diet',ontap: (){
+              ReuseableCard(assetimage: 'assets/weightgaindiet.jpg', name: 'Weight Gain Diet',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Weightgain()));
               },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/strength.jpg', name: 'Weight Loss Diet',ontap: (){
+              ReuseableCard(assetimage: 'assets/weightlossdiet.jpg', name: 'Weight Loss Diet',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Weightloss()));
               },),
             ]),

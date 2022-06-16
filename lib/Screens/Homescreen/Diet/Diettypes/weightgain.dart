@@ -33,62 +33,62 @@ class _WeightgainState extends State<Weightgain> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/cardio.jpg', name: 'Homemade protein\nsmoothies',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Homemadesmoothies,image: AssetImage('assets/protiendiet.jpg'),title: 'Homemade Protein Smoothies',)));
+              ReuseableCard(assetimage: 'assets/protiensmoothies.jpg', name: 'Homemade protein\nsmoothies',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Homemadesmoothies,image: AssetImage('assets/protiensmoothies.jpg'),title: 'Homemade Protein Smoothies',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Milk',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Milk,image: AssetImage('assets/protiendiet.jpg'),title: 'Milk',)));
+              ReuseableCard(assetimage: 'assets/milk.jpg', name: 'Milk',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Milk,image: AssetImage('assets/milk.jpg'),title: 'Milk',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Rice',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Rice,image: AssetImage('assets/protiendiet.jpg'),title: 'Rice',)));
+              ReuseableCard(assetimage: 'assets/rice.jpg', name: 'Rice',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Rice,image: AssetImage('assets/rice.jpg'),title: 'Rice',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Nuts and nut butters',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Nutsandnutbutters,image: AssetImage('assets/protiendiet.jpg'),title: 'Nuts and Nut Butters',)));
+              ReuseableCard(assetimage: 'assets/nutsandnutbutter.jpg', name: 'Nuts and nut butters',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Nutsandnutbutters,image: AssetImage('assets/nutsandnutbutter.jpg'),title: 'Nuts and Nut Butters',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Red meats',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Redmeats,image: AssetImage('assets/protiendiet.jpg'),title: 'Red Meats',)));
+              ReuseableCard(assetimage: 'assets/redmeats.jpg', name: 'Red meats',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Redmeats,image: AssetImage('assets/redmeats.jpg'),title: 'Red Meats',)));
               },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Potatoes and starches',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Potatoesandstarches,image: AssetImage('assets/protiendiet.jpg'),title: 'Potatoes and Starches',)));
+              ReuseableCard(assetimage: 'assets/potatoesandstarches.jpg', name: 'Potatoes and starches',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Potatoesandstarches,image: AssetImage('assets/potatoesandstarches.jpg'),title: 'Potatoes and Starches',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Salmon and oily fish',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Salmonandoilyfish,image: AssetImage('assets/protiendiet.jpg'),title: 'Salmon and Oily Fish',)));
+              ReuseableCard(assetimage: 'assets/salmonandoilyfish.jpg', name: 'Salmon and oily fish',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Salmonandoilyfish,image: AssetImage('assets/salmonandoilyfish.jpg'),title: 'Salmon and Oily Fish',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Dried fruit',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Driedfruits,image: AssetImage('assets/protiendiet.jpg'),title: 'Dried Fruits',)));
+              ReuseableCard(assetimage: 'assets/driedfruits.jpg', name: 'Dried fruit',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Driedfruits,image: AssetImage('assets/driedfruits.jpg'),title: 'Dried Fruits',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Whole grain bread',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Wholegrainbread,image: AssetImage('assets/protiendiet.jpg'),title: 'Whole Grain Bread',)));
+              ReuseableCard(assetimage: 'assets/wholegrainbread.jpg', name: 'Whole grain bread',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Wholegrainbread,image: AssetImage('assets/wholegrainbread.jpg'),title: 'Whole Grain Bread',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Avocados',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Avacados,image: AssetImage('assets/protiendiet.jpg'),title: 'Avocados',)));
+              ReuseableCard(assetimage: 'assets/avocados.jpg', name: 'Avocados',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Avacados,image: AssetImage('assets/Avocados.jpg'),title: 'Avocados',)));
               },),
               
             ]),

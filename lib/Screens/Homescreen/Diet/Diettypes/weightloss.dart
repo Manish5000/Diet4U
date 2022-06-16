@@ -33,62 +33,62 @@ class _WeightlossState extends State<Weightloss> {
               SizedBox(
                 height: 15,
               ),
-              ReuseableCard(assetimage: 'assets/cardio.jpg', name: ' Lean Protein',ontap: (){
+              ReuseableCard(assetimage: 'assets/protiendiet.jpg', name: ' Lean Protein',ontap: (){
                 Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Leanprotien,image: AssetImage('assets/protiendiet.jpg'),title: 'Lean Protein',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/running.png', name: 'Eggs',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Eggs,image: AssetImage('assets/protiendiet.jpg'),title: 'Eggs',)));
+              ReuseableCard(assetimage: 'assets/eggs.jpg', name: 'Eggs',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Eggs,image: AssetImage('assets/eggs.jpg'),title: 'Eggs',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/jumpingrope.jpg', name: 'Vegetables',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Vegetables,image: AssetImage('assets/protiendiet.jpg'),title: 'Vegetables',)));
+              ReuseableCard(assetimage: 'assets/fruits.jpg', name: 'Vegetables',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Vegetables,image: AssetImage('assets/fruits.jpg'),title: 'Vegetables',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/cycling.png', name: 'Apples',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Apples,image: AssetImage('assets/protiendiet.jpg'),title: 'Apples',)));
+              ReuseableCard(assetimage: 'assets/apples.jpg', name: 'Apples',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Apples,image: AssetImage('assets/apples.jpg'),title: 'Apples',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/swimming.png', name: 'Berriess',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Berries,image: AssetImage('assets/protiendiet.jpg'),title: 'Berries',)));
+              ReuseableCard(assetimage: 'assets/blueberries.jpg', name: 'Berriess',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Berries,image: AssetImage('assets/blueberries.jpg'),title: 'Berries',)));
               },),
                SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Nuts and Seeds',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Nutsandseeds,image: AssetImage('assets/protiendiet.jpg'),title: 'Nuts and Seeds',)));
+              ReuseableCard(assetimage: 'assets/nutsandnutbutter.jpg', name: 'Nuts and Seeds',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Nutsandseeds,image: AssetImage('assets/nutsandnutbutter.jpg'),title: 'Nuts and Seeds',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Salmon',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Salmon,image: AssetImage('assets/protiendiet.jpg'),title: 'Salmon',)));
+              ReuseableCard(assetimage: 'assets/salmonandoilyfish.jpg', name: 'Salmon',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Salmon,image: AssetImage('assets/salmonandoilyfish.jpg'),title: 'Salmon',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Raw Oats',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Rawoats,image: AssetImage('assets/protiendiet.jpg'),title: 'Raw Oats',)));
+              ReuseableCard(assetimage: 'assets/oats.jpg', name: 'Raw Oats',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Rawoats,image: AssetImage('assets/oats.jpg'),title: 'Raw Oats',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Chia Seeds',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Chiaseeds,image: AssetImage('assets/protiendiet.jpg'),title: 'Chia Seeds',)));
+              ReuseableCard(assetimage: 'assets/chiaseeds.jpg', name: 'Chia Seeds',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Chiaseeds,image: AssetImage('assets/chiaseeds.jpg'),title: 'Chia Seeds',)));
               },),
               SizedBox(
                 height: 10,
               ),
-              ReuseableCard(assetimage: 'assets/sprinting.png', name: 'Water',ontap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Water,image: AssetImage('assets/protiendiet.jpg'),title: 'Water',)));
+              ReuseableCard(assetimage: 'assets/water.webp', name: 'Water',ontap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) =>  Dietdescription(description: Water,image: AssetImage('assets/water.webp'),title: 'Water',)));
               },),
               
             ]),
