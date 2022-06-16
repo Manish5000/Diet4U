@@ -1,4 +1,5 @@
 
+import 'package:diet4u/Screens/SingupandSignin/authentication.dart';
 import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:diet4u/Screens/SingupandSignin/login.dart';
@@ -18,6 +19,7 @@ class ChooseAccount extends StatefulWidget {
 }
 
 class _ChooseAccountState extends State<ChooseAccount> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,18 +96,40 @@ class Buttonarea extends StatefulWidget {
   final Color? c;
   final double? iconsize;
   final VoidCallback? func;
-
+bool? isemail;
   
-   Buttonarea({ @required this.text, @required this.icon,this.func, this.c,this.iconsize});
+   Buttonarea({ @required this.text, @required this.icon,this.func, this.c,this.iconsize,this.isemail});
 
   @override
   State<Buttonarea> createState() => _ButtonareaState();
 }
 
 class _ButtonareaState extends State<Buttonarea> {
+     final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return widget.isemail == true? 
+    
+     ElevatedButton(
+      
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        fixedSize: Size(MediaQuery.of(context).size.width*0.88, MediaQuery.of(context).size.height*0.070),
+        elevation: 5,
+        primary: Colors.white
+      ),
+      onPressed: (){
+        _firebaseAuth.signOut().then((value) => Navigator.push(context, MaterialPageRoute(builder: ((context) => Authentication()))));
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(widget.icon,color: widget.c,size: widget.iconsize,),
+          SizedBox(width: 10,),
+          Text(widget.text!,style: GoogleFonts.urbanist(fontSize: 14,color: Colors.black,fontWeight: FontWeight.bold))
+        ],
+      ),
+    ) : ElevatedButton(
       
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),

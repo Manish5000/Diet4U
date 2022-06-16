@@ -14,7 +14,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 class Loginwithmail extends StatefulWidget {
   const Loginwithmail({ Key? key ,this.ismail}) : super(key: key);
-final bool? ismail ;
+final bool? ismail  ;
   @override
   State<Loginwithmail> createState() => _LoginwithmailState();
 }
