@@ -1,6 +1,7 @@
 import 'package:diet4u/Screens/SingupandSignin/authentication.dart';
 import 'package:diet4u/Screens/SingupandSignin/chooseaccount.dart';
 import 'package:diet4u/Screens/SingupandSignin/google_sign_in.dart';
+import 'package:diet4u/Screens/SingupandSignin/login.dart';
 import 'package:diet4u/Screens/aboutus.dart';
 import 'package:diet4u/Screens/contactus.dart';
 import 'package:diet4u/Screens/profile.dart';
@@ -97,13 +98,19 @@ children: [
         ),
         SizedBox(height: MediaQuery.of(context).size.height*0.040,),
         SizedBox(height: MediaQuery.of(context).size.height*0.300,),
-Buttonarea(text: 'Logout', icon: FontAwesomeIcons.arrowRightFromBracket,c: Colors.black,func: (){
+        
+Buttonarea(text: 'Logout',
+isemail: false,
+ icon: FontAwesomeIcons.arrowRightFromBracket,c: Colors.black,func: (){
+  setState(() {
+    
+  });
   Navigator.pop(context);
   final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
   provider.logout().then((value) => Navigator.push(context, MaterialPageRoute(builder: ((context) => Authentication()))));
-  _firebaseAuth.signOut().then((value) => Navigator.push(context, MaterialPageRoute(builder: ((context) => Authentication()))));
   
-},)
+  
+},),
       ],
     ),
   )
